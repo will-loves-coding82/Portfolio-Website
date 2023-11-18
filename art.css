@@ -1,0 +1,49 @@
+
+
+
+#artShopBox {
+    display: inline-flex;
+    align-items: center;
+}
+
+#artShopBox img {
+    border-radius: 100px;
+    margin-right: var(--margin3);
+}
+
+#artShopBox a {
+    color: var(--blue);
+}
+
+table {
+    margin: auto;
+}
+
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+
+
+figcaption {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.tagList p {
+    color: var(--dark-grey);
+    font-size: 0.9em;
+    margin: 8px;
+}

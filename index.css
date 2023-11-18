@@ -1,0 +1,115 @@
+#mainHero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#mainHero #introductions {
+    margin-right: var(--margin5, 24px);
+    max-width: var(--screen-sm, 480px);
+}
+
+#mainHero #introductions #nameIntro {
+    color: var(--dark-grey,rgb(98, 98, 98));
+    font-size: var(--font5, 24px);
+    font-weight: 400;
+}
+
+#mainHero img {
+    border-radius: 30px;
+}
+
+#mainTableTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: var(--screen-xs);
+    flex-wrap: wrap;
+}
+
+/* Add margin to middle link element*/
+#mainTableTitle div a:nth-child(2) {
+    margin: 0 12px;
+}
+
+#mainTableTitle h2 {
+    font-weight: 400;
+    min-width: 200px;
+    margin-bottom: var(--margin2, 10px);
+}
+
+
+
+
+#mainTable tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#mainTable td {
+    width: var(--screen-xs, 320px);
+    height: var(--screen-xs, 320px);
+    margin: var(--margin1, 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey, rgb(222, 222, 222));
+}
+
+
+footer > header {
+    margin-bottom: var(--margin6, 36px);
+}
+
+footer form {
+    max-width: var(--screen-sm, 320px);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    border-radius: var(--border-radius3, 20px);
+}
+
+
+legend {
+    margin: 50px 0 var(--margin1, 8px) 0;
+}
+
+
+input, select, textarea, optgroup option, datalist {
+    background-color: var(--light-grey);
+    box-sizing: border-box;
+    border: none;
+    border-radius: var(--border-radius1);
+    padding: var(--padding4);
+    font-size: 1em;
+    font-family: Inter;
+    width: 100%;
+    margin: var(--margin2) 0 var(--margin5) 0;
+}
+
+
+
+textarea {
+    min-height: 200px;
+    max-height: 320px;
+    padding: var(--padding5);
+    resize: none;
+}
+
+#submitBtn{
+    background-color: var(--black);
+    color: white;
+    box-shadow: 0 2px 5px rgba(151, 151, 151, 0.5);
+    width: 200px;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+}

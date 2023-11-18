@@ -1,0 +1,85 @@
+
+main{
+    max-width: 100vw !important;
+}
+
+#devHero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: var(--screen-lrg, 1024px);
+    margin: 0 auto 100px auto;
+}
+
+#devIntroductions  {
+    max-width: 400px;
+    margin-right: var(--margin5, 24px);
+}
+
+#devProjectsTable  {
+    width: 100%;
+
+    & img {
+        border-radius: var(--border-radius2, 12px);
+    }
+
+    & tr {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        margin: var(--margin5, 24px) 0;
+    }
+
+  
+    & tr:nth-child(odd)  {
+        background-color: var(--grey1, #f7f7f7);
+    }
+
+}
+
+
+
+
+#devProjectsTable td {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: var(--padding7, 48px);
+    max-width: var(--screen-lrg, 1024px);
+}
+
+
+
+
+#devProjectsTable td h2 {
+   margin-top: 2rem;
+}
+
+ 
+#devProjectsTable td  p {
+    margin: 1rem auto 1rem auto;
+    
+}
+
+
+#devProjectsTable td a {
+    color: var(--blue,rgb(27, 27, 183));
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+}
+
+#devProjectsTable td a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+iframe {
+    width: 30vw;
+    height: 60vh;
+    min-width: 300px;
+    min-height: 350px;
+}

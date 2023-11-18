@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Art Page</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "art.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    
+    <nav class = "navBar">
+
+        <svg width="50" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="59" cy="53" r="53" fill="#181818" />
+            <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
+            <path
+                d="M58.8943 50.122L51.4848 71H43.8198L35.1328 41.0335H43.4183L48.6378 62.5685L55.9743 41.6175H61.8508L69.1143 62.5685L74.4068 41.0335H82.6923L74.0418 71H66.3768L58.8943 50.122Z"
+                fill="white" />
+        </svg>
+
+        <input type = "checkbox" class = "menuToggle" id = "menuToggle">
+        <label class = "menuIcon" for = "menuToggle" ><img src = "assets/media/menu_icon.png" height = "50" width = "50"></label>
+
+        <ul class = "navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        <ul class = "dropDownMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <!--Main content here -->
+    <main>
+
+        <br>
+
+        <header>
+            <h1><b>My Art</b></h1>
+            <p>
+                I got started in art at an early age, drawing cars and shoddy perspective drawings. I eventually moved my way up to traditional 
+                media in High School where I was exposed to newer techniques and tools. However I felt that it was too limiting and labor-intensive. 
+                I eventually began messing with Adobe Illustrator which was when I fell in love with digital art. As time progressed, my art style went through 
+                several iterations before I found sketches + watercolor really fun to make. I admired the level of surrealism and 
+                fantasy you were able to capture with them. But I also enjoy making other kinds of digital art too including landscapes and occasionally 
+                some graphic design assets. You can find my link to my personal <b>RedBubble Shop</b> below!
+            </p>
+
+            <div id = "artShopBox">
+                <img width = "72" height = "72" src = "./assets/media/redbubblelogo.jpg" alt = "red bubble shop logo"/>
+                <a href = "https://www.redbubble.com/people/WackyWillie/shop?asc=u" target="_blank">WackyWillie</a>
+            </div>
+          
+        </header>
+
+
+            <table>
+                <colgroup>
+                    <col>
+                </colgroup>
+
+                <tr>
+                    <td>
+                        <figure>
+                            <picture>
+                                <source srcset="./assets/media/Bigfoot_wide.webp" type = "image/webp" media="(min-width: 800px)">
+                                
+                                <!-- Fallback image and description-->
+                                <img src="/assets/media/Bigfoot.png" alt = "bigfoot picking his nose" decoding = "sync">
+                            </picture>
+                            <figcaption><p><i>Mornings, Am I Right?</i></p></figcaption>
+                        </figure>
+                        <article class = "tagList">
+                            <p>#mornings</p>
+                            <p>#hairy</p>
+                            <p>#bum</p>
+                            <p>#bigfoot</p>
+                        </article>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <figure> 
+                            <picture>
+                                <source srcset="./assets/media/OfficeWorker_wide.webp" type = "image/webp" media="(min-width: 800px)">
+                                
+                                <!-- Fallback image and description-->
+                                <img src="/assets/media/OfficeWorker.png" alt = "tired office worker">
+                            </picture>
+                            <figcaption><p><i>Please Don't Make Me Work</i></p></figcaption>
+                        </figure>
+                        <article  class = "tagList">
+                            <p>#adobe</p>
+                            <p>#office</p>
+                            <p>#corporate</p>
+                            <p>#watercolor</p>
+                        </article>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <figure>
+                            <picture>
+                                <source srcset="./assets/media/Rudolph_Fishing_wide.webp"type = "image/webp" media="(min-width: 800px)">
+                                
+                                <!-- Fallback image and description-->
+                                <img src="/assets/media/Rudolph_Fishing.png" alt = "rudolph the reindeer fishing" >
+                            </picture>
+
+                            <figcaption><p><i>Rudolph Gone Fishing</i></p></figcaption>
+                        </figure>
+
+                        <article  class = "tagList">
+                            <p>#reindeer</p>
+                            <p>#fishing</p>
+                            <p>#Christmas</p>
+                            <p>#sketch</p>
+                        </article>
+                    </td>
+                </tr>
+
+            </table>
+
+        
+
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+
+#aboutHero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p#bio {
+    color: gray;
+    font-weight: 400;
+    margin-right: var(--margin6, 36px);
+}
+
+#skillsTable tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+
+#skillsTable td {
+    background-color: var(--light-grey, rgb(222, 222, 222));
+    border-radius: var(--border-radius3, 20px);
+    padding: var(--margin1, 8px) var(--margin3, 12px);
+    margin-right: var(--margin1, 8px);
+    margin-bottom: var(--margin1, 8px);
+    display: flex;
+    justify-content: center;
+    transition: background-color ease-in 0.1s;
+}
+
+#skillsTable td:hover {
+    background-color: var(--blue, rgb(27, 27, 183));
+    cursor: pointer;
+    color: white;
+}
+
+/* Selects p elements that are immediately followed by h3*/
+td article p:has(+h3) {
+    color: var(--dark-grey, rgb(98, 98, 98));
+    font-weight: 500;
+}
+
+
+#experienceTable {
+    width: 100%;
+}
+
+#experienceTable td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+    max-width: var(--screen-md, 768px);
+}
+
+
+
+#experienceTable td p ~ h3 {
+    color: var(--aqua, rgb(3, 156, 180));
+}
+
+
+
+details {
+    margin-top: var(--margin6, 36px);
+    
+}
+
+
+details summary {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+details summary:hover {
+    cursor: pointer;
+    color: var(--blue, rgb(27, 27, 183));
+}
+
+
+
+details[open] summary ~ * {
+    animation: fade-in .5s ease-in-out; 
+}
+  
+@keyframes fade-in {
+    0%    {opacity: 0;}
+    100%  {opacity: 1;}
+}
+

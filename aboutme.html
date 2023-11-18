@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>About Me Page</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "about.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+      
+    <nav class = "navBar">
+
+        <svg width="50" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="59" cy="53" r="53" fill="#181818" />
+            <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
+            <path
+                d="M58.8943 50.122L51.4848 71H43.8198L35.1328 41.0335H43.4183L48.6378 62.5685L55.9743 41.6175H61.8508L69.1143 62.5685L74.4068 41.0335H82.6923L74.0418 71H66.3768L58.8943 50.122Z"
+                fill="white" />
+        </svg>
+
+        <input type = "checkbox" class = "menuToggle" id = "menuToggle">
+        <label class = "menuIcon" for = "menuToggle" ><img src = "assets/media/menu_icon.png" height = "50" width = "50"></label>
+
+        <ul class = "navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        <ul class = "dropDownMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <!--Main content here -->
+    <main>
+
+        <br>
+
+        <section id = "aboutHero" >
+            <header>
+                <h1><b>About Me</b></h1>
+                <p id = "bio">I'm a workaholic student, programmer, and graphic designer.<br>
+                    Fueled by a passion for making a difference at UCSD, I'm <br>
+                    committed to several campus organizations including ACM AI, <br>
+                     VGDC, and the <span>San Diego Supercomputer Center.</span> 
+
+                    <br>
+                    Outside of school, I enjoy exploring San Diego with my friends, <br>
+                    playing the piano, and making digital illustrations. 
+                </p>
+            </header>
+
+            
+            <table id = "skillsTable">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <thead >
+                  <tr>
+                    <th>My Skills</th>
+
+                    <!-- Not sure how to simplify empty headers for each column -->
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>HTML/CSS</td>
+                    <td>UI Design</td>
+                    <td>React.js</td>
+                  </tr>
+                  <tr>
+                    <td>Graphic Design</td>
+                    <td>CI/CD</td>
+                    <td>Adobe Illustrator</td>
+                  </tr>
+                  <tr>
+                    <td>C++</td>
+                    <td>Python</td>
+                    <td>Figma</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </section>
+
+
+        <section id = "experienceSection">
+            <h2>Experience</h2>
+
+            <hr>
+            
+            <table id = "experienceTable">
+                <colgroup>
+                    <col>
+                </colgroup>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <article>
+                                <p>Spring 2022</p>
+                                <h3>TritonWare Graphic Designer</h3>
+                                <p>
+                                    TritonWare is a quarterly game jam under VGDC that brings students together to develop their own game. 
+                                    As part of a team, I helped create 2D assets including sprites, keyframes, props, and environments. 
+                                    We used unity, paint.net, and other tools to create a story-based minigame that revolves around
+                                    a theme of nostalgia. We released it publicly on itch.io
+                                </p>
+                            </article>
+                        
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <article>
+                                <p>Spring 2023 - Current</p>
+                                <h3>ACM AI board member</h3>
+                                <p>
+                                    I joined ACM AI board as a developer and graphic designer. The first phase of my work involved 
+                                    redesigning the main website ai.acmucsd.com. I worked alongside with other devs to 
+                                    wireframe pages and implement the designs using LESS and Ant UI Design. My design skills also reach
+                                    in marketing where I currently assist the committee in creating social media posts and instagram reels
+                                    for their events and educational programs.
+
+                                </p>
+                            </article>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <article>
+                                <p>Summer 2023</p>
+                                <h3>SDSC Dev Intern</h3>
+                                <p> 
+                                    I took on a full time role as a full stack developer under the summer dev program hosted
+                                    by SDSC. Much like other projects, I was teamed up with other student interns to create an
+                                    Android mobile application. My role consisted of managing the team's code, github branches, 
+                                    UI research, and backend integration. We utilized Kotlin, Jetpack Compose UI, Firebase, and 
+                                    Google Cloud. 
+                                </p>
+                            </article>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>
+                            <article>
+                                <p>Fall 2023 - current</p>
+                                <h3>SDSC Part Time Dev</h3>
+                                <p> 
+                                    I am currently working part-time at SDSC as a backend developer. I've been assisting in the 
+                                    creation of  API endpoints, routes, and schemas along with a team of dedicated programmers. 
+                                    My main tech stack is GO and SQL. I still have a lot to learn in the future, so this section will
+                                    be updated accordingly.
+                                </p>
+                            </article>
+                        </td>
+                    </tr>
+                </tbody>
+  
+
+                
+            </table>
+
+            
+        </section>
+
+
+        <section>
+            <h2>Tips for Excelling in School</h2>
+            <details>
+                <summary>Classes</summary>
+                <p>
+                    Start early, and often. It's a phrase that's been ingrained into me as a student <br>
+                    to who took CSE classes. It applies to any area of life. If you put in the <br>
+                    work early, you save yourself time and energy down the road. But at the <br>
+                    same time, make sure to balance the load. Only do what you believe you can do <br>
+                    within your means. 
+                </p>
+
+                <aside>
+                    If you do take CSE classes, I highly recommend CSE166 (Image Processing), CSE110 (Software Engineering) <br>
+                    CSE130 (Functional Programming), and CSE167 (Computer Graphics), 
+                </aside>
+              </details>
+
+              <br>
+
+              <details>
+                <summary>Social Life</summary>
+                <p>
+                    I heard from several sources that UCSD is socially dead, but I disagree. Here's a few pointers on how <br>
+                    to optimize your social life as a student.
+                </p>
+                <ol>
+                    <li>If you're living on campus, your roommates are the best way to make friends</li>
+                    <li>I found that stepping away from work and hanging out with people often helped me appreciate having a community</li>
+                    <li>Partying is awesome. You'll meet lot's of people</li>
+                    <li>Join clubs and attend their events! A lot of orgs host bonfires, socials, and workshops where you can meet other students</li>
+                </ol>
+              </details>
+              
+              <br>
+
+              <details>
+                <summary>Internships</summary>
+                <p>
+                    Unlike a lot of people, I didn't land my first internship until my junior year. <br>
+                    It was a struggle and I made a lot of mistakes. I spent many days asking myself <br>
+                    where I wanted to go into. Research? Tutoring? Maybe a real internship off campus? I explored <br>
+                    each route and was met with only more questions and confusion. What I realized is to just <br>
+                    follow your heart and do what interests you. Moreover, don't be afraid of rejection; it's <br>
+                    natural. But with time and patience, your hard work will pay off. Don't feel pressured to <br>
+                    shadow other people. Your journey is unique so make it yours.
+                </p>
+              </details>
+
+              <br>
+        </section>
+
+
+        <template>
+            <section>
+                <h2>Some Fun Content</h2>
+                <video width="540" height="400" loop autoplay>
+                    <source src="./assets/media/recordplayer.mp4" type="video/mp4">
+                </video>
+                <audio controls src="./assets/media/lofi.mp3" loop >
+                    <a href="./assets/media/lofi.mp3"> Download audio </a>
+                </audio>
+            </section>
+        </template>
+
+
+    </main>
+
+
+</body>
+
+</html>
