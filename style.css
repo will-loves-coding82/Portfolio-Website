@@ -7,6 +7,7 @@ html {
     font-family: 'Inter', sans-serif, Arial;
     background-color: var(--background-color, white);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
@@ -15,9 +16,12 @@ html {
     }
 }
 
+
+
 body {
-    margin: 0;
-    margin-bottom: 80px;
+    margin: 0 0 10rem 0;
+    transition: height 0.4s ease-in;
+
 }
 
 header {

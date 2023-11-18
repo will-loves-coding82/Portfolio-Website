@@ -131,53 +131,60 @@
             </header>
         
 
-            <form>
+            <form method="POST" action="https://httpbin.org/post" target="_blank" >
                 <fieldset>
 
-                    <legend>Fill me out!</legend>
-                    <hr>
-
                     <label for= "fullname">Name</label><br>
-                    <input id = "fullname" name = "fullname" type="text" placeholder = "Full name">
+                    <input id = "fullname" name = "fullname" type="text" placeholder = "Full name" required>
+                    <output class = "error-output"></output>
+                    <output class = "info-output"></output>
+                    
+                    <br>
 
                     <label for= "email">Email Address</label><br>
-                    <input type = "email" id = "email" name = "email" placeholder = "Eg. example@gmail.com">
+                    <input type = "email" id = "email" name = "email" placeholder = "Eg. example@gmail.com" required>
+                    <output class = "error-output"></output>
+                    <output class = "info-output"></output>
 
-                    <label for= "year-choice">Year</label><br>
-                    <input list="year-list" id="year-choice" name="year-choice" placeholder = "Select your">
+                    <br>
 
-                    <datalist id="year-list">
-                        <option value="Freshman"></option>
-                        <option value="Sophomore"></option>
-                        <option value="junior"></option>
-                        <option value="Freshman"></option>
+                    <label for= "experience-level">Experience</label><br>
+                    <input list="experience-list" id="experience-level" name="experience-level" placeholder="Select your experience level">
+
+                    <datalist id="experience-list">
+                        <option value="Entry Level"></option>
+                        <option value="Intermediate"></option>
+                        <option value="Advanced"></option>
+                        <option value="Expert"></option>
                         <option value="Other"></option>
-
                     </datalist>
 
 
-                    <label for="animal-select">Choose your favorite animal</label><br>
-                    <select id = "animal-select">
-                        <optgroup label="mammals">
-                            <option>dog</option>
-                            <option>cat</option>
-                            <option>hamster</option>
-                        </optgroup>
-                        <optgroup label="reptiles">
-                            <option>lizards</option>
-                            <option>frogs</option>
-                            <option>axlotls</option>
-                        </optgroup>
+                    <label for="industry-select">Choose your industry</label><br>
+                    <select id="industry-select" name = "industry-select">
+                        <option value="Technology">Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Other">Other</option>
+                        <option value="Other">I prefer not to say</option>
                     </select>
 
                     <br>
                     <br>
-                    <br>
+                  
 
                     <label for= "comments">Message</label><br>
-                    <textarea id="comments" name = "comments" placeholder = "Enter your comments..."></textarea>
-                   
+                    <textarea id="comments" name = "comments" placeholder = "Enter your comments..." required ></textarea>
+                    <output class = "error-output"></output>
+                    <output class = "info-output"></output>
 
+                    
+                    <input type="hidden" name="possible_bot" value="true">
+
+                    <br>
+                    <br>
+                    
                     <input type="submit" id = "submitBtn">
                 </fieldset>
             </form>

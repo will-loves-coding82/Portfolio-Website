@@ -76,11 +76,13 @@ fieldset {
 }
 
 
-legend {
-    margin: 50px 0 var(--margin1, 8px) 0;
+
+label {
+    display: inline-block;
+    margin-top: var(--margin5);
+    margin-bottom:  var(--margin2);
+
 }
-
-
 input, select, textarea, optgroup option, datalist {
     background-color: var(--light-grey);
     box-sizing: border-box;
@@ -90,15 +92,20 @@ input, select, textarea, optgroup option, datalist {
     font-size: 1em;
     font-family: Inter;
     width: 100%;
-    margin: var(--margin2) 0 var(--margin5) 0;
+    margin:0;
 }
 
+
+select {
+    appearance: none;
+}
 
 
 textarea {
     min-height: 200px;
     max-height: 320px;
     padding: var(--padding5);
+    margin-bottom: 0;
     resize: none;
 }
 
@@ -113,3 +120,46 @@ textarea {
     cursor: pointer;
     background-color: var(--blue);
 }
+
+
+output {
+    display: inline;
+    /* height: 16px; */
+    margin: 4px 0;
+}
+
+
+
+/* Form validation messages*/
+input[type="text"]:invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+input[type="text"]:invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Name cannot be empty"
+}
+
+
+input[type="email"]:user-invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+input[type="email"]:user-invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Email must be properly formatted"
+}
+
+
+textarea:invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+textarea:invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Comments cannot be empty"
+}
+
+
+
+
