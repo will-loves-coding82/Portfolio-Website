@@ -56,3 +56,38 @@
         <input type="submit" id = "submitBtn">
     </fieldset>
 </form>
+
+
+<!--
+/* CSS Form validation messages*/
+input[type="text"]:invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+input[type="text"]:invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Name cannot be empty"
+}
+
+
+input[type="email"]:user-invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+input[type="email"]:user-invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Email must be properly formatted"
+}
+
+
+textarea:invalid + output.error-output::before {
+    color:  var(--error-red);
+    content: "Oh no!"
+}
+textarea:invalid + output.error-output +  output.info-output::before {
+    color:  var(--error-red);
+    content: "Comments cannot be empty"
+}
+
+
+-->
