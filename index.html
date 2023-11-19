@@ -142,7 +142,8 @@
                     <br>
 
                     <label for= "email">Email Address</label><br>
-                    <input type = "email" id = "email" name = "email" placeholder = "Eg. example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required >
+                    <input type="email" id="email" name="email" placeholder="Eg. example@gmail.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+
                     <output class = "error-output"></output>
                     <output class = "info-output"></output>
 
@@ -175,12 +176,13 @@
                   
 
                     <label for= "comments">Message</label><br>
-                    <textarea id="comments" name = "comments" placeholder = "Enter your comments..." required ></textarea>
+                    <textarea id="comments" name = "comments" placeholder = "Enter your comments..." maxlength="300" required></textarea>
                     <output class = "error-output"></output>
                     <output class = "info-output"></output>
 
                     
                     <input type="hidden" name="possible_bot" value="true">
+                    <input type="hidden" name="form_errors" id ="form-errors" value="" >
 
                     <br>
                     <br>
