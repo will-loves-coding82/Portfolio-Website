@@ -123,13 +123,16 @@ textarea {
 
 
 output {
-    display: inline;
+    /* visibility: hidden; */
     /* height: 16px; */
     margin: 4px 0;
     color: var(--error-red);
+    opacity: 1;
 }
 
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 
-
-
+}
 

@@ -135,14 +135,14 @@
                 <fieldset>
 
                     <label for= "fullname">Name</label><br>
-                    <input id = "fullname" name = "fullname" type="text" placeholder = "Full name" required>
+                    <input id = "fullname" name = "fullname" type="text" placeholder = "Full name" pattern="[A-Za-z ]+" required >
                     <output class = "error-output"></output>
                     <output class = "info-output"></output>
                     
                     <br>
 
                     <label for= "email">Email Address</label><br>
-                    <input type = "email" id = "email" name = "email" placeholder = "Eg. example@gmail.com" >
+                    <input type = "email" id = "email" name = "email" placeholder = "Eg. example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required >
                     <output class = "error-output"></output>
                     <output class = "info-output"></output>
 

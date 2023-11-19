@@ -7,8 +7,10 @@ function init() {
     const name = document.getElementById("fullname");
     const email = document.getElementById("email");
     const comments = document.getElementById("comments");
+    const emailRegEx = new RegExp(email.pattern);
 
     const nameError = document.querySelector("input[type='text']:invalid + output.error-output")
+    const emailError = document.querySelector("input[type='email']:invalid + output.error-output")
 
     name.setCustomValidity("Name cannot be empty");
 
@@ -22,14 +24,25 @@ function init() {
     });
 
     email.addEventListener("input", (event) => {
-        if(email.validity.valid) {
+        console.log(event.target.value);
+        if(email.validity.typeMismatch) {
             email.setCustomValidity("email is not properly formatted");
-            console.log("invalid")
+        }
+      
+        if(!emailRegEx.test(email.value)) {
+            email.setCustomValidity("Either missing a period or not formatted");
+            email.style = "outline: solid 3px var(--error-red)"
+            emailError.innerHTML = "Ensure you have valid characters and domain length";
+            emailError.classList.remove('hidden');
 
+            setTimeout(() => {
+                emailError.classList.add('hidden');
+            }, 1000); // hide after 1 seconds
         }
         else {
             email.setCustomValidity("");
-            console.log("valid")
+            email.style = "outline: none"
+            emailError.innerHTML = ""
         }
     });
 
@@ -45,6 +58,7 @@ function init() {
     form.addEventListener("submit", function (event) {
         if(!form.checkValidity()){
             event.preventDefault();
+            form.reportValidity();
             // Trigger validation messages if the form is not valid
         }
         
