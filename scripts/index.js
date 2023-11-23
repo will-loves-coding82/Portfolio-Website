@@ -3,22 +3,30 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
 
+    let root = document.querySelector(':root');
+    const themeSwitch = document.getElementById("checkbox");
     const form = document.getElementById("contact-form");
     const formErrors = document.getElementById("form-errors");
-
     const name = document.getElementById("fullname");
     const email = document.getElementById("email");
     const comments = document.getElementById("comments");
     const emailRegEx = new RegExp(email.pattern);
-
     const maxCommentLength = parseInt(comments.getAttribute("maxlength"));
-
     const emailError = document.querySelector("input[type='email'] + output.error-output")
     const commentsError = document.querySelector("textarea + output.error-output")
 
     let formErrorsList = [];
-
     name.setCustomValidity("Name cannot be empty");
+
+
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        console.log("checking for theme")
+
+        themeSwitch.checked = savedTheme == "isDark";
+        updateTheme();
+    }
 
     name.addEventListener("input", (event) => {
         if(name.validity.valueMissing) {
@@ -91,7 +99,30 @@ function init() {
         formErrors.setAttribute("value", formErrorsJSON);
 
      });
-    
 
+
+
+     themeSwitch.addEventListener("change", updateTheme);
+    
+        
+    function updateTheme() {
+        console.log("updating theme")
+        if (themeSwitch.checked) {
+            localStorage.setItem('theme', 'isDark');
+            root.style.setProperty('--app-background-color', "black");
+            root.style.setProperty('--text-color', "white");  
+        }  
+        else {
+            localStorage.setItem('theme', 'isLight');
+            root.style.setProperty('--app-background-color', "white");
+            root.style.setProperty('--text-color', "black");  
+        }
+
+    }
 
 }
+
+
+
+
+

@@ -2,12 +2,14 @@
 @import 'vars.css';
 
 html {
-    color: var(--black, rgb(13,13,13));
+    color: var(--main-black);
     font-size: var(--font3, 14px);
     font-family: 'Inter', sans-serif, Arial;
-    background-color: var(--background-color, white);
+    background-color: var(--app-background-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    
+    /* transition: background-color 0.2s ease-in; */
 }
 
 @media (min-width: 768px) {
@@ -71,10 +73,10 @@ p {
 }
 
 a {
-    color: var(--black, rgb(13,13,13));
     text-decoration: none;
     font-weight: 500;
     transition: color ease-in 0.1s;
+    color: var(--text-color);
 }
 
 a:hover {
@@ -87,7 +89,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: var(--app-background-color);
     width: 100vw;
     top: 0;
     padding: var(--padding3, 12px) 0;
@@ -105,6 +107,7 @@ nav li {
     margin: var(--margin3, 12px);
     text-align: center;
     font-size: 1.2em;
+
 }
 
 
@@ -156,6 +159,7 @@ nav .menuToggle {
         list-style: none;
         margin: 0 var(--margin5, 24px);
         max-height: none;  
+        
     }
     .menuIcon {
         display: none;

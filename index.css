@@ -1,3 +1,7 @@
+main {
+    color: var(--text-color);
+}
+
 #mainHero {
     display: flex;
     flex-direction: row;
@@ -15,6 +19,55 @@
     font-size: var(--font5, 24px);
     font-weight: 400;
 }
+
+#container {
+    width: 56px;
+    height: 32px;
+    position: relative;
+}
+
+
+
+#container {
+    margin-bottom: var(--margin3);
+}
+
+#checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+#switch {
+    width: 100%;
+    height: 100%;
+    background-color:  var(--light-grey);
+    border-radius: var(--border-radius3);
+    cursor: pointer;
+    display: block;
+}
+
+#slider {
+    width: 27.5px;
+    height: 27.5px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 27px/2 - 11px);
+    top: calc(50% - 27px/2);
+    transition: all 0.15s ease-out;
+}
+
+#checkbox:checked + #switch {
+    background-color: var(--blue);
+}
+
+#checkbox:checked + #switch #slider {
+    left: calc(50% - 28px/2 + 11px);
+    top: calc(50% - 27px/2);
+  }
+
 
 #mainHero img {
     border-radius: 30px;
@@ -110,8 +163,8 @@ textarea {
 }
 
 #submitBtn{
-    background-color: var(--black);
-    color: white;
+    background-color: var(--main-black);
+    color: var(--text-color);
     box-shadow: 0 2px 5px rgba(151, 151, 151, 0.5);
     width: 200px;
 }

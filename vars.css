@@ -23,15 +23,18 @@
     --screen-lrg: 1024px;
 
     
-    --background-color: white;
+    --app-background-color: white;
     --blue: color-mix(in srgb, #122340 20%, rgb(44, 124, 237));
     --aqua: color(display-p3 0.5 0.8 0.6);
-    --light-grey: rgb(222, 222, 222);
+    --light-grey: rgb(202, 202, 202);
     --dark-grey: rgb(98, 98, 98);
     --grey1: #f7f7f7;
-    --black:rgb(13, 13, 13);
+    --main-black:rgb(28, 28, 28);
     --error-red: rgb(228, 3, 3);
     --warning-yellow: rgb(206, 130, 37);
+    --text-color: black;
+    --button-color:white;
+    
 
 
     --border-radius1: 8px;
