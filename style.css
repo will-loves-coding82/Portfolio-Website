@@ -1,6 +1,11 @@
 /* This file provides base styles for all pages  */
 @import 'vars.css';
 
+@font-face {
+        font-family: 'Geist';
+        src: url('./assets/Geist/Geist-Regular.otf');
+      }
+
 html {
     color: var(--main-black);
     font-size: var(--font3, 14px);
@@ -11,6 +16,12 @@ html {
     
     /* transition: background-color 0.2s ease-in; */
 }
+
+* {
+    letter-spacing: -0.3px;
+
+}
+
 
 @media (min-width: 768px) {
     html {
@@ -94,12 +105,14 @@ nav {
     top: 0;
     padding: var(--padding3, 12px) 0;
     min-height: 80px;
+    z-index: 15;
 
 }
 
 nav svg {
     margin: 0 var(--margin5, 24px);
 }
+
 
 
 nav li {

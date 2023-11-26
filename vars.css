@@ -26,16 +26,23 @@
     --app-background-color: white;
     --blue: color-mix(in srgb, #122340 20%, rgb(44, 124, 237));
     --aqua: color(display-p3 0.5 0.8 0.6);
-    --light-grey: rgb(202, 202, 202);
-    --dark-grey: rgb(98, 98, 98);
+    --light-grey: rgb(228, 228, 228);
+    --dark-grey: rgb(71, 71, 71);
     --grey1: #f7f7f7;
     --main-black:rgb(28, 28, 28);
     --error-red: rgb(228, 3, 3);
     --warning-yellow: rgb(206, 130, 37);
-    --text-color: black;
+
+    --box-shadow-light: 1px 0px 5px rgba(97, 97, 97, 0.2);
+    --box-shadow-dark: 1px 0px 5px rgba(97, 97, 97, 0.2);
+
+    --border-light: rgb(199, 199, 199);
+    --border-dark: rgb(228, 228, 228);
+    --title-color: var(--main-black);
+    --text-color: var(--main-black);
+    
     --button-color:white;
     
-
 
     --border-radius1: 8px;
     --border-radius2: 12px;

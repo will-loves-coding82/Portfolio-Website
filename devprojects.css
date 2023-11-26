@@ -13,9 +13,147 @@ main{
 }
 
 #devIntroductions  {
-    max-width: 400px;
     margin-right: var(--margin5, 24px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+#myCanvas {
+    height: 400px;
+    width: 600px;
+    z-index: 2;
+}
+
+@media(max-width: 480px) {
+    #myCanvas {
+        height: 200px;
+        width: 300px;
+        z-index: 2;
+    }
+}
+
+
+
+#devIntroductions  {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    & h1 {
+        color: var(--title-color);
+
+    }
+}
+
+#devIntroductions #devDescription {
+    max-width: 400px;
+    display: block;
+    flex-wrap: wrap; 
+    & code {
+        color: var(--dark-grey);
+        width: 350px;
+    }
+}
+
+
+#quoteSection {
+    max-width: var(--screen-lrg);
+    margin: 10rem auto;
+    box-sizing: border-box;
+
+}
+
+#quoteBox{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5rem;
+
+    /* text-align: center; */
+   
+    & h2 {
+        display: inline-block;
+        padding: 4px 16px 0 0 ;
+        margin: 0;
+        text-align: center;
+        border-radius: var(--border-radius3);
+        font-weight: 600;
+        font-size: 2rem;
+        transition: color 0.2s ease-in;
+        cursor: pointer;
+        color: var(--text-color)
+    }
+
+    & h2:nth-child(1):hover {
+        color: rgb(47, 211, 132);
+    }
+
+    & h2:nth-child(2):hover {
+        color: rgb(211, 74, 47); 
+    }
+
+    & h2:nth-child(3):hover {
+        color: rgb(2, 53, 223); 
+    }
+}
+
+
+#gitHubBox {
+    width: 280px;
+    height: 300px;
+    /* border: 0.5px solid var(--light-grey) ; */
+    border-radius: var(--border-radius3);
+    margin-right: 2rem;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+
+    & p#gitHubDescription {
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0 12px;
+        border-radius: var(--border-radius2);
+        color: var(--main-black);
+   }
+
+}
+
+
+img#gitHubProfile {
+    border-radius: var(--border-radius3)  var(--border-radius3) 0 0;
+    z-index: 2;
+    height: 240px;
+    object-fit: fill;
+}
+
+a#gitHubLink {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    z-index: 6;
+    box-sizing: border-box;
+
+    & svg {
+        z-index: 7;
+        transition: transform 0.1s ease-out;
+
+    }
+   
+    & svg:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+}
+
+
+
+
 
 #devProjectsTable  {
     width: 100%;
@@ -25,16 +163,23 @@ main{
     }
 
     & tr {
-        padding: 2rem 0;
-        display: flex;
-        align-items: center;
+        width: 100%;
         margin: var(--margin5, 24px) 0;
     }
 
+
   
-    & tr:nth-child(odd)  {
-        background-color: var(--grey1, #f7f7f7);
+   
+    & tr  {
+
+        & h2 {
+            color: var(--title-color);
+        }
+        & p {
+            color: var(--dark-grey);
+        }
     }
+
 
 }
 
@@ -46,7 +191,7 @@ main{
     flex-direction: column;
     flex-wrap: wrap;
     margin: auto;
-    padding: var(--padding7, 48px);
+    padding: var(--padding7, 48px) 0;
     max-width: var(--screen-lrg, 1024px);
 }
 
@@ -58,10 +203,7 @@ main{
 }
 
  
-#devProjectsTable td  p {
-    margin: 1rem auto 1rem auto;
-    
-}
+
 
 
 #devProjectsTable td a {

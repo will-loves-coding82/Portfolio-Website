@@ -16,6 +16,11 @@ p#bio {
     margin-right: var(--margin6);
 }
 
+
+#skillsTable th {
+    color: var(--dark-grey);
+}
+
 #skillsTable tr {
     display: flex;
     flex-wrap: wrap;

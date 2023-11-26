@@ -20,6 +20,10 @@ main {
     font-weight: 400;
 }
 
+#mainHero #introductions h1 {
+    color: var(--title-color);
+}
+
 #container {
     width: 56px;
     height: 32px;
@@ -92,6 +96,7 @@ main {
     font-weight: 400;
     min-width: 200px;
     margin-bottom: var(--margin2, 10px);
+    color: var(--title-color);
 }
 
 
@@ -116,6 +121,10 @@ main {
 
 footer > header {
     margin-bottom: var(--margin6, 36px);
+}
+
+footer > header h2 {
+    color: var(--title-color);
 }
 
 footer form {
@@ -164,7 +173,7 @@ textarea {
 
 #submitBtn{
     background-color: var(--main-black);
-    color: var(--text-color);
+    color: var(--button-color);
     box-shadow: 0 2px 5px rgba(151, 151, 151, 0.5);
     width: 200px;
 }
@@ -176,8 +185,6 @@ textarea {
 
 
 output {
-    /* visibility: hidden; */
-    /* height: 16px; */
     margin: 4px 0;
     color: var(--error-red);
     opacity: 1;

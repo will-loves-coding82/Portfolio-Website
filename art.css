@@ -1,14 +1,23 @@
 
 
+header h1 {
+    color: var(--title-color);
+}
+
+header p {
+    color: var(--dark-grey);
+}
 
 #artShopBox {
     display: inline-flex;
     align-items: center;
 }
 
+
 #artShopBox img {
     border-radius: 100px;
     margin-right: var(--margin3);
+    margin-bottom: var(--margin6);
 }
 
 #artShopBox a {
@@ -20,17 +29,26 @@ table {
 }
 
 
+
+
 figure {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    margin-bottom: 54px; 
+    margin: 0;
+      
 }
 
+source, img {
+    border-radius: var(--border-radius3);
+}
 
-
-figcaption {
+figcaption p {
     font-size: 1.1em;
     text-align: center;
+    color: var(--dark-grey);
+    margin: var(--margin2) 0 0 0;
+    padding: 0;
 }
 
 
@@ -46,4 +64,10 @@ figcaption {
     color: var(--dark-grey);
     font-size: 0.9em;
     margin: 8px;
+}
+
+@media (max-width: 480px) {
+    table {
+        margin: 0;
+    }
 }

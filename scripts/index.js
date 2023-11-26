@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
 
     let root = document.querySelector(':root');
+    
     const themeSwitch = document.getElementById("checkbox");
     const form = document.getElementById("contact-form");
     const formErrors = document.getElementById("form-errors");
@@ -110,12 +111,16 @@ function init() {
         if (themeSwitch.checked) {
             localStorage.setItem('theme', 'isDark');
             root.style.setProperty('--app-background-color', "black");
-            root.style.setProperty('--text-color', "white");  
+            root.style.setProperty('--text-color', "var(--light-grey)"); 
+            root.style.setProperty('--title-color', "white");  
+ 
         }  
         else {
             localStorage.setItem('theme', 'isLight');
             root.style.setProperty('--app-background-color', "white");
-            root.style.setProperty('--text-color', "black");  
+            root.style.setProperty('--text-color', "var(--main-black");  
+            root.style.setProperty('--title-color', "var(--main-black");  
+
         }
 
     }
