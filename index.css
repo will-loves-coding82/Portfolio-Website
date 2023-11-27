@@ -34,6 +34,7 @@ main {
 
 #container {
     margin-bottom: var(--margin3);
+    display: none;
 }
 
 #checkbox {
