@@ -33,8 +33,8 @@
     --error-red: rgb(228, 3, 3);
     --warning-yellow: rgb(206, 130, 37);
 
-    --box-shadow-light: 1px 0px 5px rgba(97, 97, 97, 0.2);
-    --box-shadow-dark: 1px 0px 5px rgba(97, 97, 97, 0.2);
+    --box-shadow-light: 2px 2px 5px rgba(97, 97, 97, 0.2);
+    --box-shadow-dark: 2px 2px 5px rgba(97, 97, 97, 0.2);
 
     --border-light: rgb(199, 199, 199);
     --border-dark: rgb(228, 228, 228);

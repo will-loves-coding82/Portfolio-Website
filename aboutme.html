@@ -8,7 +8,6 @@
 
     <link rel = "stylesheet" href = "style.css">
     <link rel = "stylesheet" href = "about.css">
-    <!-- <script  src = "scripts/theme.js" type="module"></script> -->
     <script>
         let root = document.querySelector(':root');
         const savedTheme = localStorage.getItem('theme');
@@ -40,7 +39,7 @@
 
 
     <nav class = "navBar">
-
+        
         <svg width="50" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="59" cy="53" r="53" fill="#181818" />
             <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
@@ -49,8 +48,12 @@
                 fill="white" />
         </svg>
 
-        <input type = "checkbox" class = "menuToggle" id = "menuToggle">
-        <label class = "menuIcon" for = "menuToggle" ><img src = "assets/media/menu_icon.png" height = "50" width = "50"></label>
+        <input type = "checkbox" id="menuToggle" >
+        <label for="menuToggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
 
         <ul class = "navMenu">
             <li><a href="index.html">Home</a></li>

@@ -125,10 +125,6 @@ nav li {
 
 
 
-/* Hide the default checkbox*/
-nav .menuToggle {
-    display: none;
-}
 
 .navMenu {
     display: none;
@@ -141,7 +137,7 @@ nav .menuToggle {
     opacity: 0;
     position: absolute;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--app-background-color);
     display: block;
     box-sizing: border-box;
     padding: 0 var(--padding5, 24px);
@@ -155,12 +151,34 @@ nav .menuToggle {
 }
 
 
-.menuIcon {
-    margin: 0 var(--margin5, 24px);
-    cursor: pointer;
+/* Hide the default checkbox*/
+nav #menuToggle {
+    display: none;
 }
 
-.menuToggle:checked ~ .dropDownMenu {
+label[for="menuToggle"] {
+    display: block;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    margin: 0 var(--margin6);
+  }
+ 
+  
+  label[for="menuToggle"] div {
+    position: relative;
+    height: 3px;
+    background-color: var(--text-color);
+    margin-bottom: 5px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+      0.3s ease right;
+    border-radius: 12px;
+  }
+
+
+
+#menuToggle:checked ~ .dropDownMenu {
     opacity: 1;
 }
 
@@ -172,13 +190,14 @@ nav .menuToggle {
         list-style: none;
         margin: 0 var(--margin5, 24px);
         max-height: none;  
-        
     }
-    .menuIcon {
+
+
+    .dropDownMenu {
         display: none;
     }
 
-    .dropDownMenu {
+    label[for="menuToggle"] {
         display: none;
     }
 }

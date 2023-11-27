@@ -29,6 +29,27 @@ function init() {
         updateTheme();
     }
 
+    themeSwitch.addEventListener("change", updateTheme);
+    
+        
+    function updateTheme() {
+        console.log("updating theme")
+        if (themeSwitch.checked) {
+            localStorage.setItem('theme', 'isDark');
+            root.style.setProperty('--app-background-color', "black");
+            root.style.setProperty('--text-color', "var(--light-grey)"); 
+            root.style.setProperty('--title-color', "white");  
+ 
+        }  
+        else {
+            localStorage.setItem('theme', 'isLight');
+            root.style.setProperty('--app-background-color', "white");
+            root.style.setProperty('--text-color', "var(--main-black");  
+            root.style.setProperty('--title-color', "var(--main-black");  
+        }
+
+    }
+
     name.addEventListener("input", (event) => {
         if(name.validity.valueMissing) {
             name.setCustomValidity("Name cannot be empty");
@@ -103,27 +124,7 @@ function init() {
 
 
 
-     themeSwitch.addEventListener("change", updateTheme);
-    
-        
-    function updateTheme() {
-        console.log("updating theme")
-        if (themeSwitch.checked) {
-            localStorage.setItem('theme', 'isDark');
-            root.style.setProperty('--app-background-color', "black");
-            root.style.setProperty('--text-color', "var(--light-grey)"); 
-            root.style.setProperty('--title-color', "white");  
- 
-        }  
-        else {
-            localStorage.setItem('theme', 'isLight');
-            root.style.setProperty('--app-background-color', "white");
-            root.style.setProperty('--text-color', "var(--main-black");  
-            root.style.setProperty('--title-color', "var(--main-black");  
 
-        }
-
-    }
 
 }
 
