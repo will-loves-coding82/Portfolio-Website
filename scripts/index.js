@@ -4,8 +4,10 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
 
     let root = document.querySelector(':root');
-    
+
+    const themeContainer = document.getElementById("container");
     const themeSwitch = document.getElementById("checkbox");
+
     const form = document.getElementById("contact-form");
     const formErrors = document.getElementById("form-errors");
     const name = document.getElementById("fullname");
@@ -18,6 +20,9 @@ function init() {
 
     let formErrorsList = [];
     name.setCustomValidity("Name cannot be empty");
+
+    // Used to display theme switcher if javascript is enabled
+    themeContainer.style.display = "block";
 
 
     const savedTheme = localStorage.getItem('theme');
