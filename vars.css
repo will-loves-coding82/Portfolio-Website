@@ -17,23 +17,34 @@
     --margin7: 48px;
 
 
-    --screen-xs: 320px;
+    --screen-xs: 380px;
     --screen-sm: 480px;
     --screen-md: 768px;
     --screen-lrg: 1024px;
 
     
-    --app-background-color: white;
+    /* General colors */
+    --app-background-light: rgb(243, 243, 243);
+    --app-background-dark: rgb(21,20,20);
+
+    --green: rgb(59,186,0);
     --blue: color-mix(in srgb, #122340 20%, rgb(44, 124, 237));
     --aqua: color(display-p3 0.5 0.8 0.6);
-    --light-grey: rgb(228, 228, 228);
-    --dark-grey: rgb(71, 71, 71);
-    --grey1: #f7f7f7;
-    --main-black:rgb(28, 28, 28);
+    --light-grey: rgb(230, 230, 230);
+    
+    --dark-grey1: rgb(47, 46, 46);
+    --dark-grey2: rgb(33, 30, 30);
+
+    --text-dark-grey: rgb(116, 112, 112);
+    --text-light-grey: rgb(242,242,242);
+
+    --black:rgb(0, 0, 0);
+
+
     --error-red: rgb(228, 3, 3);
     --warning-yellow: rgb(206, 130, 37);
 
-    --box-shadow-light: 2px 2px 5px rgba(97, 97, 97, 0.2);
+    --box-shadow-light: 0 4px 2px -2px rgba(97, 97, 97, 0.2);
     --box-shadow-dark: 2px 2px 5px rgba(97, 97, 97, 0.2);
 
     --border-light: rgb(199, 199, 199);

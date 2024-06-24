@@ -6,7 +6,7 @@
 
 
     <meta charset="UTF-8">
-    <title>William's Personal Portfolio</title>
+    <title>William's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/assets/media/logo2.svg">
 
     <!--Style sheets-->
@@ -14,9 +14,10 @@
     <link rel = "stylesheet" href = "index.css">
 
     <script  src = "scripts/index.js" type="module" ></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <!-- Load font family -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -60,155 +61,57 @@
 
     <!--Main content here -->
     <main>
-
-        <br>
-
+        <div> </div>
         <section id = "mainHero">
 
-            <header id = "introductions">
-                <p id = "nameIntro">Hi, I'm William</p>
-                <h1><b>I'm a developer and artist</b></h1>
-                <p>I like to code <strong><em>cool stuff</em></strong> <br> and make <strong><em>fun
-                    illustrations</em></strong> on the side</p>
+            <!-- <img height="120" width="120" src="/assets/media/profilePhoto.PNG" alt="illustration of me"> -->
+            <h2 id = "title" >William Kim</h2>
+            <p id = "role">Software developer at San Diego Supercomputer Center</p>
+        </section>
 
-                <div id="container">
-                    
-                    <input type="checkbox" id="checkbox">
-                    <label id="switch" for="checkbox">
-                        <span id="slider"></span>
-                    </label>
-                </div>
+        <section >
+        
+            <section id = "socialLinks">
+                <a href = "https://www.linkedin.com/in/william-kim-810684221/" target="_blank">
+                    <box-icon  type='logo' name='linkedin-square' color="var(--text-dark-grey)" size="sm"></box-icon>
+                </a>
 
-            </header>
+                <a href = "https://github.com/will-loves-coding82" target="_blank">
+                    <box-icon type='logo' name='github' color="var(--text-dark-grey)" size="sm"></box-icon>
+                </a>
 
-            <img height="300" width="300" src="/assets/media/profilePhoto.PNG" alt="illustration of me">
+                <a href = "mailto:williammmm.kim@gmail.com">
+                    <box-icon name='envelope' type="solid" color="var(--text-dark-grey)"size="sm"></box-icon>
+                </a>
+            </section>
+            <!-- <input type="checkbox" id="checkbox">
+                <label id="switch" for="checkbox">
+                    <span id="slider"></span>
+                </label> -->
         </section>
 
         <br>
 
-        <section>
-            <header id = "mainTableTitle">
-                <h2>Stuff I've Done</h2>
-                <div>
-                    <a href = "https://github.com/will-loves-coding82" target="_blank">github</a>
-                    <a href = "https://www.linkedin.com/in/william-kim-810684221/" target="_blank">linkedin</a>
-                    <a href = "mailto:williammmm.kim@gmail.com" title = "williammmm.kim@gmail.com">email</a>
+        <section id = "workPreview">
+            <h2>I’m passionate about making awesome products.</h2>
+            <p id = "workCaption">Hey, I'm Will. I'm a new grad from UCSD. I have a diverse background in frontend and backend projects.  Feel free to reach out if you want to talk!</p>
+            <div id = "grid">
+                <div class = "gridItem" id="item-0">
+                    <h3>3</h3>
+                    <p>Provided web and software solutions for three organizations on campus</p>
                 </div>
+                <div class = "gridItem" id="item-1">&nbsp;</div>
+                <div class = "gridItem" id="item-2">&nbsp;</div>
+                <div class = "gridItem" id="item-3">&nbsp;</div>
+            </div>
 
-            </header>
-            <hr>
+            <button class = "button" id = "contactButton">Contact</button>
 
-            <table id = "mainTable">
-                <caption>
-                    @williamkim
-                </caption>
-
-                <colgroup>
-                    <col>
-                    <col>
-                    <col>
-                </colgroup>
-
-                <tbody>
-                    <tr>       
-                        <td>
-                            <a href="https://ai.acmucsd.com" target="_blank">
-                                <img src="/assets/media/acmai.svg" alt = "acm ai logo" title = "acm ai website redesign" height = "160" width = "160">
-                            </a>
-                        </td>
-                        
-                        <td>
-                            <a href="https://akanksha-maker-ucsd.github.io/bloomBook/" target="_blank">
-                                <img  src="/assets/media/bloombook.png" alt = "bloombook app mobile ui mockup" title = "android application development">
-                            </a>
-                        </td>
-    
-                        <td>
-                            <a href="https://wabadaba.itch.io/lostagain" target="_blank">
-                                <img src="/assets/media/lostagain_small.png" alt = "lost again cover art" title = "video game art">
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
+        
         </section>
 
 
 
-        <footer>
-            <header>
-                <h2>Let's Connect</h2>
-                <p>A lot of what I showcase on this site is just a glimpse. If you <br>
-                    want to talk or connect, don't hesitate to reach out <br>
-                </p>
-                
-            </header>
-
-            <p id = "emailAddress"><a href="mailto:williammmm.kim@gmail.com">williammmm.kim@gmail.com</a></p>
-        
-
-            <!-- <form id = "contact-form" method="POST" action="https://httpbin.org/post" target="_blank" >
-                <fieldset>
-
-                    <label for= "fullname">Name</label><br>
-                    <input id = "fullname" name = "fullname" type="text" placeholder = "Full name" pattern="[A-Za-z ]+" required >
-                    <output class = "error-output"></output>
-                    <output class = "info-output"></output>
-                    
-                    <br>
-
-                    <label for= "email">Email Address</label><br>
-                    <input type="email" id="email" name="email" placeholder="Eg. example@gmail.com" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
-
-                    <output class = "error-output"></output>
-                    <output class = "info-output"></output>
-
-                    <br>
-
-                    <label for= "experience-level">Experience</label><br>
-                    <input list="experience-list" id="experience-level" name="experience-level" placeholder="Select your experience level">
-
-                    <datalist id="experience-list">
-                        <option value="Entry Level"></option>
-                        <option value="Intermediate"></option>
-                        <option value="Advanced"></option>
-                        <option value="Expert"></option>
-                        <option value="Other"></option>
-                    </datalist>
-
-
-                    <label for="industry-select">Choose your industry</label><br>
-                    <select id="industry-select" name = "industry-select">
-                        <option value="Technology">Technology</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Healthcare">Healthcare</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Other">Other</option>
-                        <option value="Other">I prefer not to say</option>
-                    </select>
-
-                    <br>
-                    <br>
-                  
-
-                    <label for= "comments">Message</label><br>
-                    <textarea id="comments" name = "comments" placeholder = "Enter your comments..." maxlength="350" required></textarea>
-                    <output class = "error-output"></output>
-                    <output class = "info-output"></output>
-
-                    
-                    <input type="hidden" name="possible_bot" value="true">
-                    <input type="hidden" name="form_errors" id ="form-errors" value="" >
-
-                    <br>
-                    <br>
-
-                    <input type="submit" id = "submitBtn">
-                </fieldset>
-            </form> -->
-
-        </footer>
     </main>
 
 
