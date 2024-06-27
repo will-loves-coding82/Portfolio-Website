@@ -10,8 +10,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--light-grey);
-    height: 50vh;
+    height: 25vh;
     margin: -48px -24px 24px -24px !important;
     padding: 5rem 0;
     border-bottom-left-radius: var(--border-radius3);
@@ -28,13 +27,15 @@ main {
 
 
 div#sectionLinks {
-    max-width: 800px;
     margin: auto;
 }
 
 div#sectionLinks button {
     margin-right: 1rem;
     background-color: var(--light-grey);
+}
+div#sectionLinks button:hover {
+    background-color: rgb(208, 208, 208);
 }
 
 div#sectionLinks button p{
@@ -43,13 +44,37 @@ div#sectionLinks button p{
 
 
 
-section#acmAI {
+section#acmAI #aiDescription {
     max-width: 800px;
     margin: auto;
     margin-top: 10rem;
+    margin-bottom: 3rem;
 }
 
 
 section#acmAI p{
     color: var(--text-dark-grey);
+}
+
+
+
+section#acmAI div:not(:first-child) {
+    background-color: var(--light-grey);
+    height: 50vh;
+    max-width: 800px;
+    margin: auto;
+    justify-content: centers;
+    border-radius: var(--border-radius3);
+    margin-top: 2rem;
+    display: flex;
+    padding: 48px 48px 0 48px;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    
+}
+
+section#acmAI div:not(:first-child)  img {
+    max-width: 450px;
+    margin: auto;
+
 }
