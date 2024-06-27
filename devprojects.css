@@ -102,6 +102,7 @@ section#bloomBook {
 }
 
 
+
 #bloomBook #mockup button {
     position: relative;
     bottom: 120%;
@@ -119,11 +120,12 @@ section#bloomBook {
 
     #bloomBookGrid {
         grid-template-rows: repeat(5, 180px) !important;
-	    grid-template-columns: 300px !important;
+	    grid-template-columns: 100% !important;
+        margin: 8rem auto;
     }
 
     #bloomBookGrid div {
-        width: 340px;
+        width: 100%;
         padding: var(--padding5);
     }
     #bloomBookGrid #mockup {
@@ -140,6 +142,9 @@ section#bloomBook {
     }
     #bloomBookGrid #camera {
         grid-area: 5 / 1 / 5 / 1;
+    }
+    #bloomBook #mockup #mockupImage {
+        width: 280px;
     }
 
 }
