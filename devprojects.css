@@ -172,11 +172,9 @@ section#vgdc #vgdcDescription {
 }
 
 section#vgdc #vgdcDescription div:first-child { 
+    margin-left: 20rem;
+    margin-top: 10rem;
     max-width: var(--screen-sm);
-    position: relative;
-    left:  20%;
-    top: 120px;
-    margin-right: 3rem;
 }
 
 
@@ -235,7 +233,7 @@ section#vgdc #vgdcNews #newsImage{
 
 @media (max-width: 1000px) {
     section#vgdc {
-        margin-top: 5rem;
+        margin-top: 10rem;
     }
     
 
@@ -251,14 +249,13 @@ section#vgdc #vgdcNews #newsImage{
 
     section#vgdc #vgdcDescription #homeImage {
         width: 600px;
-        transform: translateY(-50px) !important;
+        transform: translateY(-120px) !important;
     }
 
 
     section#vgdc #vgdcDescription { 
         display: flex;
         flex-direction: column;
-        margin: 0 -24px !important;
     }
     
     section#vgdc #vgdcDescription div:first-child { 
