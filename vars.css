@@ -24,18 +24,18 @@
 
     
     /* General colors */
-    --app-background-light: rgb(243, 243, 243);
+    --app-background-light: rgb(247, 247, 247);
     --app-background-dark: rgb(21,20,20);
 
     --green: rgb(59,186,0);
     --blue: rgb(18,92,237);
     --aqua: color(display-p3 0.5 0.8 0.6);
-    --light-grey: rgb(235, 235, 235);
+    --light-grey: rgb(239, 239, 239);
     
     --dark-grey1: rgb(47, 46, 46);
     --dark-grey2: rgb(33, 30, 30);
 
-    --text-dark-grey: rgb(150, 150, 150);
+    --text-dark-grey: rgb(173, 173, 173);
     --text-normal-grey: rgb(186, 186, 186);
     --text-light-grey: rgb(242,242,242);
 
@@ -60,6 +60,7 @@
     --border-radius1: 8px;
     --border-radius2: 12px;
     --border-radius3: 20px;
+    --border-radius4: 32px;
 
 
     --font1: 8px;

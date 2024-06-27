@@ -141,8 +141,12 @@ p#workCaption {
         margin-bottom: 1rem;
      }
 
-     #item-0 {
-        height: 140px !important;
+     #item-0, #item-3 {
+        height: 180px !important;
+     }
+
+     #item-1, #item-2 {
+        height: 60px;
      }
      #item-0 h3 {
         margin-top: 1rem !important;
