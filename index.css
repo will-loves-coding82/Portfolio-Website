@@ -7,15 +7,35 @@ main {
 
 #mainHero {
     text-align: center;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 9rem auto 2rem auto;
+    height: 60vh;
 }
 
 
+h2#title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    line-height: 1rem !important;
+ }
 
-p#role {
-    max-width: 280px;
-    margin: auto;
-    color: var(--text-dark-grey);
+ h3#role {
+    margin: 0 auto 3rem auto;
+    font-weight: 400;
+    margin-top: 2rem !important;
+    color: var(--text-normal-grey);
+}
+
+ span#contactRow {
+    display: inline-flex;
+    align-items: center;
+ }
+
+ #contactButton {
+    margin-left: 1rem;
 }
 
 #socialContainer {
@@ -27,11 +47,6 @@ p#role {
     margin: 0;
     border-radius: var(--border-radius3);
     /* background-image: radial-gradient(49% 81% at 45% 47%, #FFE20345 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #DFFF00E3 3%, #3EFF0D00 62%, #FF000000 99%),radial-gradient(142% 91% at 125% 38%, #FFDB00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 8% 90%, #FFAB00FF 1%, #FF000000 99%),radial-gradient(142% 91% at 69% 77%, #00FF00FF 0%, #4EC34EFF 32%, #FF4700FF 64%); */
-}
-
-#mainHero img {
-    border-radius: 100px;
-    margin: auto;
 }
 
 
@@ -54,7 +69,7 @@ section#socialLinks a {
 }
 
 p#workCaption {
-    max-width: var(--screen-xs);
+    max-width: var(--screen-sm);
     margin: 0.5rem auto;
     color: var(--text-dark-grey);
     text-align: center;
@@ -68,12 +83,13 @@ p#workCaption {
     flex-direction: column;
 }
 
-#workPreview h2 {
-    font-weight: 600;
-}
 
-#contactButton {
+#workPreview h2 {
+    text-align: center;
     margin: auto;
+    max-width: var(--screen-sm);
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 #checkbox {
@@ -132,11 +148,7 @@ p#workCaption {
         margin-top: 1rem !important;
      }
 
-     h2#title {
-        font-size: 5rem;
-        font-weight: 700;
-        margin-top: 1rem;
-     }
+
     
  }
 
@@ -151,8 +163,10 @@ p#workCaption {
     }
     h2#title {
         font-weight: 600;
-        margin-top: 3rem;
-        font-size: 8rem;
+    }
+    h3#role {
+        font-size: 1.8rem;
+        font-weight: 400;
     }
  }
 
@@ -164,7 +178,7 @@ p#workCaption {
 
  #item-0 {
    
-    background-color: var(--green); 
+    background-color: var(--blue); 
     color: white;
     height: 240px;
     display: flex;
@@ -215,13 +229,6 @@ p#workCaption {
     
  }
 
-#workPreview h2 {
-
-    text-align: center;
-    margin: auto;
-    max-width: var(--screen-sm);
-    
-}
 
 footer {
     width: 100%;
@@ -231,24 +238,4 @@ footer {
 
 
 
-
-
-#submitBtn{
-    background-color: var(--main-black);
-    color: var(--button-color);
-    box-shadow: 0 2px 5px rgba(151, 151, 151, 0.5);
-    width: 200px;
-}
-
-#submitBtn:hover {
-    cursor: pointer;
-    background-color: var(--blue);
-}
-
-
-.hidden {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-
-}
 

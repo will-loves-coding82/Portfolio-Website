@@ -2,19 +2,95 @@
 
 #aboutHero {
     text-align: center;
-    margin-bottom: 2rem;
-    background-image: url(./assets/media/BMO.jpg);
+    margin-bottom: 12rem;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    max-width: var(--screen-sm);
+    font-weight: 600;
+    font-size: 2rem;
+}
 
 #aboutCaption {
     max-width: var(--screen-sm);
     margin: 0.5rem auto;
     color: var(--text-dark-grey);
-    
 }
+
+section#skills {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div#skillsGrid {
+    display: grid;
+    max-width: var(--screen-md);;
+    grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+	gap: 16px;
+    margin: 4rem auto 10rem auto;
+}
+
+.gridItem {
+    display:flexbox;
+    padding: 24px;
+    width: fit-content;
+    border-radius: var(--border-radius2);
+    background-color: var(--light-grey);
+}
+
+
+section#educationContainer {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: var(--screen-md);
+    margin: auto;
+}
+
+section#educationContainer div {
+    margin-right: 5rem;
+}
+
+section#educationContainer p:not(#schoolName){
+    color: var(--text-dark-grey);
+}
+
+section#educationContainer p#schoolName {
+    color: var(--blue);
+    margin-top: 0;
+}
+
 
 
 @media (min-width: 720px) {
     #aboutHero h2 {
         margin-top: 5rem;
+        margin: auto;
     }
 }
+@media (max-width: 720px) {
+    div#skillsGrid {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section#educationContainer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    section#educationContainer div {
+        margin-right: 0;
+    }
+
+
+
+}
+
+
+

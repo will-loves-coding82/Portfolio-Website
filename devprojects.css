@@ -1,3 +1,5 @@
+@import './vars.css';
+
 main {
     max-width: 100vw !important;
 }
@@ -6,228 +8,48 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: var(--screen-lrg, 1024px);
-    margin: 0 auto 100px auto;
-}
-
-#devIntroductions {
-    margin-right: var(--margin5, 24px);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#myCanvas {
-    height: 400px;
-    width: 600px;
-    z-index: 2;
-}
-
-@media(max-width: 480px) {
-    #myCanvas {
-        height: 200px;
-        width: 300px;
-        z-index: 2;
-    }
-}
-
-
-
-#devIntroductions {
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-    & h1 {
-        color: var(--title-color);
-
-    }
-}
-
-#devIntroductions #devDescription {
-    max-width: 400px;
-    display: block;
-    flex-wrap: wrap;
-
-    & code {
-        color: var(--dark-grey);
-        width: 350px;
-    }
-}
-
-
-#quoteSection {
-    max-width: var(--screen-lrg);
-    margin: 10rem auto;
-    box-sizing: border-box;
-
-}
-
-#quoteBox {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 5rem;
-
-    /* text-align: center; */
-
-    & h2 {
-        display: inline-block;
-        padding: 4px 16px 0 0;
-        margin: 0;
-        text-align: center;
-        border-radius: var(--border-radius3);
-        font-weight: 600;
-        font-size: 2rem;
-        transition: color 0.2s ease-in;
-        cursor: pointer;
-        color: var(--text-color)
-    }
-
-    & h2:nth-child(1):hover {
-        color: rgb(47, 211, 132);
-    }
-
-    & h2:nth-child(2):hover {
-        color: rgb(211, 74, 47);
-    }
-
-    & h2:nth-child(3):hover {
-        color: rgb(2, 53, 223);
-    }
-}
-
-
-#gitHubBox {
-    width: 280px;
-    height: 300px;
-    border-radius: var(--border-radius3);
-    margin-right: 2rem;
-    margin-top: 2rem;
-    background-color: white;
-    box-shadow: var(--box-shadow-light);
-    display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-between;
-    z-index: 1;
-
-    & p#gitHubDescription {
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 0 12px;
-        border-radius: var(--border-radius2);
-        color: var(--main-black);
-    }
-
-}
-
-
-img#gitHubProfile {
-    border-radius: var(--border-radius3) var(--border-radius3) 0 0;
-    z-index: 2;
-    height: 240px;
-    object-fit: fill;
-}
-
-a#gitHubLink {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem;
-    z-index: 6;
-    box-sizing: border-box;
-
-    & svg {
-        z-index: 7;
-        transition: transform 0.1s ease-out;
-
-    }
-
-    & svg:hover {
-        cursor: pointer;
-        transform: scale(1.02);
-    }
-}
-
-
-
-
-
-#devProjectsTable {
-    width: 100%;
-
-    & img {
-        border-radius: var(--border-radius2, 12px);
-    }
-
-    & tr {
-        width: 100%;
-        margin: var(--margin5, 24px) 0;
-    }
-
-
-    & tr {
-
-        & h2 {
-            color: var(--title-color);
-        }
-
-        & p {
-            color: var(--dark-grey);
-        }
-    }
-
-
-}
-
-
-
-
-#devProjectsTable td {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
-    padding: var(--padding7, 48px) 0;
-    max-width: var(--screen-lrg, 1024px);
-}
-
-
-
-
-#devProjectsTable td h2 {
-    margin-top: 2rem;
-}
-
-
-
-
-
-#devProjectsTable td a {
-    color: var(--blue, rgb(27, 27, 183));
-    font-weight: 500;
-    font-size: 1.1em;
-    margin-bottom: 2rem;
-}
-
-#devProjectsTable td a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-
-iframe#bloomBookFrame {
-    width: 20vw;
+    background-color: var(--light-grey);
     height: 50vh;
-    min-width: 300px;
-    min-height: 350px;
+    margin: -48px -24px 24px -24px !important;
+    padding: 5rem 0;
+    border-bottom-left-radius: var(--border-radius3);
+    border-bottom-right-radius: var(--border-radius3);
+    align-items: center;
+}
+
+#devHero h3 {
+    color: var(--blue);
+    font-weight: 500;
 }
 
 
-iframe#flowTrailsFrame {
 
-    width: 320px;
-    height: 350px;
+
+div#sectionLinks {
+    max-width: 800px;
+    margin: auto;
+}
+
+div#sectionLinks button {
+    margin-right: 1rem;
+    background-color: var(--light-grey);
+}
+
+div#sectionLinks button p{
+    color: black;
+}
+
+
+
+section#acmAI {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+
+section#acmAI p{
+    color: var(--text-dark-grey);
 }
