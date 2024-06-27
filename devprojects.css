@@ -263,10 +263,7 @@ section#vgdc #vgdcNews #newsImage{
     }
     
     section#vgdc #vgdcDescription div:first-child { 
-        max-width: var(--screen-sm);
-        position: relative;
-        left:  20%;
-        top: 120px;
+        margin: auto;
     }
     
     
@@ -284,7 +281,6 @@ section#vgdc #vgdcNews #newsImage{
     
     section#vgdc #vgdcNews #newsImage{
         width: 500px;
-    
     }
 
 }
