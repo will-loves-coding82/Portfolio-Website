@@ -83,7 +83,7 @@ h4 {
 }
 
 p {
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 a {
@@ -103,6 +103,7 @@ a:hover {
     background-color: var(--dark-grey1);
     border-radius: 32px;
     padding: 8px 18px;
+    margin: 0;
     font-size: var(--font4);
     letter-spacing: 0.5px;
     transition: all 0.2s ease-in;

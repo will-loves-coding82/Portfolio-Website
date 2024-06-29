@@ -127,7 +127,7 @@ section#educationContainer p#schoolName {
 
 
  #item-1 {
-    background-color: var(--dark-grey1); 
+    background-color: white;
     color: var(--text-dark-grey);
 
     grid-row-start: 1;
@@ -139,7 +139,7 @@ section#educationContainer p#schoolName {
  }
 
  #item-1 h3 {
-    background-image: linear-gradient(90deg, rgb(85, 0, 255), rgb(191, 112, 167));
+    background-image: linear-gradient(90deg, rgb(29, 47, 250), rgb(6, 195, 189));
     line-height: 2rem;
     background-clip: text;
     color: transparent;
@@ -151,7 +151,7 @@ section#educationContainer p#schoolName {
  }
 
  #item-2 {
-    background-color: var(--light-grey); 
+    background-color: white;
     grid-row-start: 2;
     grid-column-start: 3;
  
