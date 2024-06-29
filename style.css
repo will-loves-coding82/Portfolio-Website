@@ -15,7 +15,7 @@ html {
 }
 
 * {
-    letter-spacing: -0.3px;
+    letter-spacing: 0.1px;
 
 }
 
@@ -75,7 +75,7 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
 }
 
 h4 {
@@ -100,13 +100,16 @@ a:hover {
 .button {
     border: none;
     width: fit-content;
-    background-color: var(--black);
+    background-color: var(--dark-grey1);
     border-radius: 32px;
-    padding: 0px 24px;
+    padding: 8px 18px;
     font-size: var(--font4);
     letter-spacing: 0.5px;
     transition: all 0.2s ease-in;
     margin: 0;
+    max-height: 40px;
+    align-items: center;
+    display: flex;
 }
 
 .button p {
