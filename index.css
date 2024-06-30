@@ -166,7 +166,7 @@ h2#title {
     
 
      #item-1, #item-2 {
-        padding: 12px 24px;
+        padding: 0px 24px;
      }
      
 
@@ -176,10 +176,12 @@ h2#title {
 
      #item-1 {
         grid-area: 2 / 1 / 2 / 2;
+        height: 240px;
      }
 
      #item-2 {
         grid-area: 2 / 2 / 2 / 2;
+        height: 240px;
      }
   
      #item-2 h2 {
