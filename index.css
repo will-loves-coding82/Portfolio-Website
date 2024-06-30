@@ -1,8 +1,5 @@
 @import 'vars.css';
 
-main {
-    color: black;
-}
 
 
 #mainHero {
@@ -68,15 +65,13 @@ h2#title {
 
  #item-0 {
     padding-right: 0;
+    box-sizing: border-box;
     overflow: hidden;
     background-color: var(--light-grey);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 3;
-    grid-column-end: 3;
+
  }
 
  #item-0 > span {
@@ -98,13 +93,6 @@ h2#title {
     justify-content: space-between;
     background-color: var(--light-grey);
     color: var(--text-dark-grey);
-
-    grid-row-start: 1;
-    grid-column-start: 3;
- 
-    grid-row-end: 3;
-    grid-column-end: 5;
-    
  }
 
  #item-1 #linksBox {
@@ -135,10 +123,6 @@ h2#title {
     justify-content: space-between;
     background-color: var(--light-grey); 
     color: var(--text-dark-grey);
-    grid-row-start: 1;
-    grid-column-start: 5;
-    grid-row-end: 3;
-    grid-column-end: 7;
  }
 
  #item-2 button {
@@ -159,7 +143,7 @@ h2#title {
         margin-top: 3rem;
         display: grid; 
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         height: 100%;
     }
