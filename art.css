@@ -1,42 +1,66 @@
 
 
-header h1 {
-    color: var(--title-color);
+header h2{
+    max-width: var(--screen-md);
 }
 
-header p {
-    color: var(--dark-grey);
-}
-
-#artShopBox {
+#shopContainer {
     display: inline-flex;
     align-items: center;
+    margin-top: 1rem;
+}
+
+#shopContainer p {
+    padding-left: 12px;
+    color: var(--text-dark-grey);
 }
 
 
-#artShopBox img {
-    border-radius: 100px;
-    margin-right: var(--margin3);
-    margin-bottom: var(--margin6);
+
+
+section#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    gap: 12px;
+    background: white;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: var(--border-radius3);
 }
 
-#artShopBox a {
-    color: var(--blue);
+.flexItem {
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 4px;
+    flex: 1 0 calc(33.33% - 12px); /* Adjust for 3 columns */
+    box-sizing: border-box;
+      
 }
 
-table {
+.flexItem img {
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 16px;
+    max-height: 280px;
+    max-width: 280px;
     margin: auto;
 }
 
+@media (max-width: 900px) {
+    .flexItem {
+        flex: 1 0 calc(50% - 12px); /* Adjust for 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 700px) {
 
 
-
-figure {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 54px; 
-    margin: 0;
-      
+    .flexItem {
+        flex: 1 0 calc(100% - 12px); /* Full-width on very small screens */
+    }
 }
 
 source, img {
