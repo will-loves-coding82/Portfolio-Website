@@ -6,6 +6,11 @@ main {
     box-sizing: border-box;
 }
 
+section#acmAI p, section#bloomBook p, section#vgdc p{
+    color: var(--text-dark-grey);
+}
+
+
 
 #devHero {
     display: flex;
@@ -134,6 +139,15 @@ section#bloomBook {
 
 
 
+section#acmAI div:first-child {
+    margin: auto;
+    text-align: center;
+}
+
+section#acmAI div:first-child p {
+    transform: translateY(24px);
+}
+
 section#acmAI div:not(:first-child) {
     background-color: var(--light-grey);
     height: 50vh;
@@ -156,10 +170,14 @@ section#acmAI div:not(:first-child)  img {
 
 }
 
-section#acmAI p, section#bloomBook p, section#vgdc p{
-    color: var(--text-dark-grey);
+
+section#acmAI button  {
+    margin: 2rem auto;
 }
 
+section#acmAI button p {
+    color: white;
+}
 
 section#vgdc {
     margin-bottom: 300px;
