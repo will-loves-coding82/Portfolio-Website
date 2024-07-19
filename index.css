@@ -43,7 +43,7 @@ h2#title {
 }
 
 .gridItem { 
-   display: flex;
+    display: flex;
     padding: 16px;
     border-radius: var(--border-radius3);
     background-color: var(--light-grey);
@@ -105,6 +105,11 @@ h2#title {
 
 
 
+ @media (max-width: 600px) {
+   #gridContainer {
+      width: 100%;
+   }
+ }
 
  @media (max-width: 1064px) {
    #mainHero {
