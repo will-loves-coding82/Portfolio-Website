@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang = "en-US">
+<html lang="en-US">
 
 
 <head>
 
 
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, init-scale = 1.0"/>
+    <meta name="viewport" content="width=device-width, init-scale = 1.0" />
 
     <title>William's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/assets/media/logo2.svg">
 
     <!--Style sheets-->
-    <link rel = "stylesheet" href = "style.css">
-    <link rel = "stylesheet" href = "index.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 
-    <script  src = "scripts/index.js" type="module" ></script>
+    <script src="scripts/index.js" type="module"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
     <!-- Load font family -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap" rel="stylesheet">
-          
+
 </head>
 
 <body>
 
-    
-    <nav class = "navBar">
-        
+
+    <nav class="navBar">
+
         <svg width="40" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="59" cy="53" r="53" fill="#181818" />
             <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
@@ -36,78 +39,122 @@
                 fill="white" />
         </svg>
 
-        <input type = "checkbox" id="menuToggle">
+        <input type="checkbox" id="menuToggle">
         <label for="menuToggle">
             <div></div>
             <div></div>
             <div></div>
         </label>
 
-        <ul class = "navMenu">
+        <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
             <li><a href="art.html">Art</a></li>
         </ul>
 
-        <ul class = "dropDownMenu">
+        <ul class="dropDownMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
             <li><a href="art.html">Art</a></li>
         </ul>
 
-        
+
     </nav>
 
-    
+
 
     <!--Main content here -->
     <main>
-        <header id = "mainHero">
-            <h2 id = "title" >Hi, I'm <span style="color: var(--text-dark-grey);">William Kim</span></h2>
-            <div id = "role">
-                <img id = "profilePicture" src = "assets/media/morty.png" width = "42" height="42"/>
-                <p>Developer at San Diego Supercomputer Center</p>
+
+        <header id="mainHero">
+
+            <section id="introduction">
+
+                <h2 id="title">William Kim</span></h2>
+                <div id="role">
+                    <img id="profilePicture" src="assets/media/morty.png" width="42" height="42" />
+                    <p>Developer at San Diego Supercomputer Center</p>
+                </div>
+
+                <a href="aboutme.html" class="arrowLink">
+                    <p>About Me</p>
+                    <img src="assets/media/rightArrow.png" width="17" height="20">
+                </a>
+
+
+
+            </section>
+
+            <div id="gridContainer">
+                <div class="gridItem" id="item-0">
+
+                    <p>Projects</p>
+                    <h4>VGDC</h4>
+
+                    <img src="assets/media/vgdcHome.png" alt="vgdc home page" width="320">
+
+                </div>
+                <div class="gridItem" id="item-1">
+
+                    <span>
+                        <p>Art</p>
+                        <!-- <a href="art.html" class="arrowLink">
+                            <p>see more</p>
+                            <img src="assets/media/rightArrow.png" width="17" height="20">
+                        </a> -->
+                        
+                    </span>
+                    <img src="assets/media/Bruce.png" width="104" height="104" >
+
+                </div>
+
+                <div class="gridItem" id="item-2">
+                    <p>Work</p>
+                    <p>Committed to 3 campus organizations</p>
+                </div>
             </div>
         </header>
 
-        <section id = "workPreview">
-            <div id = "workGrid">
-                <div class = "workGridItem" id="item-0">
-                    <span>
-                        <svg width="40" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="59" cy="53" r="53" fill="#181818" />
-                            <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
-                            <path
-                                d="M58.8943 50.122L51.4848 71H43.8198L35.1328 41.0335H43.4183L48.6378 62.5685L55.9743 41.6175H61.8508L69.1143 62.5685L74.4068 41.0335H82.6923L74.0418 71H66.3768L58.8943 50.122Z"
-                                fill="white" />
-                        </svg>
-                
-                        <h4>Projects</h4>
-                    </span>
-                    <a href = "devprojects.html">
-                        <img src = "assets/media/BloomBookPreview.png" style="transform: translateX(30%);" />
-                    </a>
-                </div>
-                <div class = "workGridItem" id="item-1">
-
-                    <h3>Art</h3>
-                    <a id = "linksBox" href = "art.html">
-                        <img src = "assets/media/wizard.jpg" width="100" height="100" style="border-radius: 20px; margin: auto; box-shadow: 4px 4px 4px rgb(209, 209, 209);"/>
-                    </a>
-                </div>
-         
-                <div class = "workGridItem" id="item-2">
-                    <a href = "assets/media/Software Engineer Resume.pdf">
-                        <button class = "button"><p>resume</p></button>
-                    </a>
-                    <h2>I'm always excited to take the next step.</h2>
-                </div>
-            </div>
-        </section> 
-
     </main>
+
+
+    <div style="width:100%; margin-top: -6rem; display: flex;">
+        <img src="assets/media/Chill-Time.png" style="height: 300px; margin: auto; transform: translateY(150px);" >
+    </div>
+
+    <footer>
+        <div>
+            <section class = "socialLinks">
+                <h4>Let's stay connected</h4>
+                <span>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/"><i class="devicon-linkedin-plain"></i></a>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/"><i class="devicon-github-original"></i></a>
+                    <i class="devicon-facebook-plain"></i>
+                </span>
+            </section>
+
+            <section class = "additionalResources">
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href = "index.html">Home</a>
+                    <a href = "aboutme.html">About</a>
+                    <a href = "devprojects.html">Work</a>
+                    <a href = "art.html">Art</a>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <a href = "tel:8189704252">818-970-4252</a>
+                    <a href="mailto:williammmmm.kim@gmail.com">williammmmm.kim@gmail.com</a>
+                    
+                </div>
+
+            </section>
+        </div>
+
+    </footer>
 
 
 </body>

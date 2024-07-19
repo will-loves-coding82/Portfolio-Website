@@ -10,13 +10,10 @@ html {
     background-color: var(--app-background-light);
     overflow-x: hidden;
     scroll-behavior: smooth;
-
-    /* transition: background-color 0.2s ease-in; */
 }
 
 * {
     letter-spacing: 0.1px;
-
 }
 
 
@@ -28,17 +25,11 @@ html {
 
 @media (max-width: 768px) {
     p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 
-
-body {
-    margin: 0 0 10rem 0;
-    transition: height 0.4s ease-in;
-
-}
 
 header {
     max-width: var(--screen-lrg, 768px);
@@ -50,7 +41,7 @@ main {
     padding: var(--padding5, 24px);
     margin-left: auto;
     margin-right: auto;
-    max-width: var(--screen-lrg, 768px);
+    max-width: var(--screen-lrg, 1024px);
 }
 
 
@@ -83,6 +74,7 @@ h4 {
 }
 
 p {
+    font-size: 16px;
     line-height: 1.4em;
 }
 
@@ -129,6 +121,28 @@ a:hover {
 }
 
 
+.arrowLink {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+ }
+ 
+ .arrowLink > p  {
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    padding-right: 8px;
+ }
+ 
+ .arrowLink img  {
+    transition: all 0.2s ease-in;
+ }
+ 
+ .arrowLink:hover  img  {
+    transform: translateX(3px);
+ }
+ 
 
 
 nav {
@@ -156,7 +170,7 @@ nav li {
     width: 72px;
     margin: var(--margin3, 12px);
     text-align: center;
-    font-size: 1.2em;
+    font-size: 18px;
 
 }
 
@@ -219,6 +233,94 @@ label[for="menuToggle"] div {
 #menuToggle:checked~.dropDownMenu {
     opacity: 1;
     display: block;
+}
+
+
+
+
+
+footer {
+    background: var(--dark-grey2);
+    margin: 6rem -12px -12px -12px;
+    padding: 24px 0 48px 0 ;
+}
+
+footer > div:first-child {
+    max-width: var(--screen-lrg, 1024px);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h4 {
+    color: white;
+    font-weight: 500;
+}
+
+
+footer .socialLinks i {
+    font-size: 24px;
+    color: white;
+    margin-right: 1rem;
+}
+
+
+footer .additionalResources {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .additionalResources div {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+footer .additionalResources div:first-child {
+    margin-right: 4rem;
+}
+
+footer .additionalResources div h4 {
+    margin: 0 0 1rem 0;
+}
+
+footer .additionalResources div a {
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+
+@media (max-width: 1064px) {
+    footer {
+        padding: var(--padding6);
+    }
+    
+    footer > div:first-child {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .socialLinks {
+        margin: auto;
+        text-align: center;
+    }
+
+    footer .additionalResources {
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    footer .additionalResources div:first-child {
+        margin-right: 0;
+    }
+
+    footer .additionalResources div {
+        margin-top: 3rem;
+    }
+ 
 }
 
 

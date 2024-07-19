@@ -9,6 +9,8 @@
     <title>About Me Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="devprojects.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
 
     <script>
         let root = document.querySelector(':root');
@@ -84,18 +86,28 @@
 
 
         <section id="devHero">
-            <h1>My Projects.</h1>
-            <!-- <div id = "sectionLinks">
-                <a href = "#acmAI">
-                    <button class = "button" id = "contactButton"><p>ACM</p></button>
-                </a>
-                <a href = "">
-                    <button class = "button" id = "contactButton"><p>Bloom Book</p></button>
-                </a>
-                <a href = "">
-                    <button class = "button" id = "contactButton"><p>VGDC</p></button>
-                </a>
-            </div> -->
+            <div>
+                <span style="margin-left: 2rem;">
+                    <h2>My Projects.</h2>
+                    <p>A showcase of my most interesting projects.</p>
+                    
+                    <div id = "sectionLinks">
+                        <a href = "#acmAI">
+                            <button class = "button" id = "contactButton"><p>ACM</p></button>
+                        </a>
+                        <a href = "#bloomBook">
+                            <button class = "button" id = "contactButton"><p>Bloom Book</p></button>
+                        </a>
+                        <a href = "#vgdc">
+                            <button class = "button" id = "contactButton"><p>VGDC</p></button>
+                        </a>
+                    </div>
+                </span>
+            </div>
+            
+            <img src="assets/media/Fast-Internet.png" height="240" width="240" >
+
+            
         </section>
 
         <section id = "bloomBook">
@@ -150,22 +162,23 @@
 
 
 
-        <!-- <section id = "vgdc">
+        <section id = "vgdc">
 
-            <div id = "vgdcDescription" style = "position: absolute; top: 0; left: 0; width: 100vw;">
+            <!-- <div id = "vgdcDescription" style = "position: absolute; top: 0; left: 0; width: 100vw;"> -->
 
+            <div id = "vgdcDescription"> 
                 <div>
                     <h2>Video Game Development Club</h2>
                     <p>An ambitious project that is still in the works. As website manager for the club, I felt that the organization needed a face lift to bring information more easily to students. I'm currently working with my friend Chase Peterson to build this using Next.js</p>
                 </div>
                
-                <img id = "homeImage" src = "assets/media/vgdcHome.png" style="align-self:flex-end; transform: translateY(-500px);">
+                <img id = "homeImage" src = "assets/media/vgdcHome.png" style="align-self: flex-end; transform: translateY(-400px);">
 
             </div>
 
             <div id = "vgdcNews">
                 
-                <img id = "newsImage" src = "assets/media/VGDC news page.png" style="align-self:flex-start; margin-right: 100px;">
+                <img id = "newsImage" src = "assets/media/VGDC news page.png" style="align-self: flex-start" >
                 <div>
                     <h2>Designed to bring news</h2>
                     <p>The website comes with statically generated blog posts for optimized content delivery. We wanted this to serve as a way to keep our members updated on club </p>    
@@ -174,10 +187,42 @@
 
 
             <img>
-        </section> -->
+        </section>
 
 
 
     </main>
+
+    <footer>
+        <div>
+            <section class = "socialLinks">
+                <h4>Let's stay connected</h4>
+                <span>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/"><i class="devicon-linkedin-plain"></i></a>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/"><i class="devicon-github-original"></i></a>
+                    <i class="devicon-facebook-plain"></i>
+                </span>
+            </section>
+
+            <section class = "additionalResources">
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href = "index.html">Home</a>
+                    <a href = "aboutme.html">About</a>
+                    <a href = "devprojects.html">Work</a>
+                    <a href = "art.html">Art</a>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <a href = "tel:8189704252">818-970-4252</a>
+                    <a href="mailto:williammmmm.kim@gmail.com">williammmmm.kim@gmail.com</a>
+                    
+                </div>
+
+            </section>
+        </div>
+
+    </footer>
 </body>
 </html>
