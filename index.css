@@ -99,7 +99,7 @@ h2#title {
  }
 
  #item-2 p:nth-child(2) {
-   color: black;
+   color: var(--text-dark-grey);
    background: none;
  }
 
