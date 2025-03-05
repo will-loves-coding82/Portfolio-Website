@@ -58,6 +58,7 @@ section#educationContainer {
     text-align: left;
     max-width: var(--screen-md);
     margin: auto;
+    margin-bottom: 10rem;
 }
 
 section#educationContainer div {
@@ -71,6 +72,15 @@ section#educationContainer p:not(#schoolName){
 section#educationContainer p#schoolName {
     color: var(--blue);
     margin-top: 0;
+}
+
+section#workContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: var(--screen-md);
+    margin: auto;
 }
 
 #workPreview {
