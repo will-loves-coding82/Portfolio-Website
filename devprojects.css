@@ -16,12 +16,13 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
 #devHero {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 9rem;
+    margin: 0 auto 9rem auto;
     align-items: center;
 }
 
 @media (max-width: 720px) {
     #devHero {
+        flex-direction: column;
         justify-content: center;
         text-align: center;
         margin: 0 auto 10rem auto;
@@ -37,16 +38,18 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
 
 
 #devHero h2 {
-    margin-bottom: 0;
+    margin-bottom: 12px;
 }
+
 #devHero h2+p {
-    margin-top: 4px;
+    padding-top: 8px;
     color: var(--text-dark-grey);
+    margin: auto;
 }
 
 
 div#sectionLinks {
-    margin: auto;
+    margin: 2rem auto 0 auto;
     display: flex;
 
 }
@@ -274,10 +277,6 @@ section#vgdc img {
 
 
 @media (max-width: 920px) {
-
-    #devHero {
-        flex-direction: column;
-    }
 
     #devHero img {
         height: 200px;
