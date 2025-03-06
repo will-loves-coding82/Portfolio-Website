@@ -25,12 +25,15 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin: 0 auto 10rem auto;
     }
     
+    #devHero h2+p {
+        max-width: 200px;
+    }
+
     div#sectionLinks {
         flex-wrap: wrap;
-        max-width: 340px;
+        max-width: 320px;
         justify-content: center;
         gap: 12px;
     }
