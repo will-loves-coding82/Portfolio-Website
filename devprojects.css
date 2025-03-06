@@ -24,7 +24,7 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
     #devHero {
         justify-content: center;
         text-align: center;
-        margin: auto;
+        margin: 0 auto 10rem auto;
     }
     
     div#sectionLinks {
