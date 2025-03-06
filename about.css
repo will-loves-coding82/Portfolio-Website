@@ -6,9 +6,6 @@
 }
 
 h2 {
-    text-align: center;
-    margin: auto;
-    max-width: var(--screen-sm);
     font-weight: 600;
     font-size: 2rem;
 }
@@ -24,6 +21,7 @@ section#skills {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
 }
 
 p#workCaption {
@@ -55,14 +53,15 @@ div#skillsGrid {
 section#educationContainer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     text-align: left;
     max-width: var(--screen-md);
     margin: auto;
     margin-bottom: 10rem;
 }
 
-section#educationContainer div {
-    margin-right: 5rem;
+section#educationContainer p {
+    max-width: var(--screen-sm);
 }
 
 section#educationContainer p:not(#schoolName){
@@ -74,13 +73,18 @@ section#educationContainer p#schoolName {
     margin-top: 0;
 }
 
-section#workContainer {
+
+section#experienceContainer {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     text-align: left;
     max-width: var(--screen-md);
     margin: auto;
+}
+
+section#experienceContainer  p{
+    max-width: var(--screen-sm);
 }
 
 #workPreview {
@@ -283,7 +287,7 @@ section#workContainer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    section#educationContainer {
+    section#educationContainer, section#experienceContainer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
@@ -291,6 +295,7 @@ section#workContainer {
     section#educationContainer div {
         margin-right: 0;
     }
+    
 
 
 
