@@ -69,6 +69,11 @@ section#soloRunning img {
     margin: 4rem auto 2rem auto;
 }
 
+section#soloRunning button {
+    margin: auto;
+}
+
+
 
 section#bloomBook {
     display: flex;
