@@ -20,6 +20,21 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
     align-items: center;
 }
 
+@media (max-width: 720px) {
+    #devHero {
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    
+    div#sectionLinks {
+        flex-wrap: wrap;
+        max-width: 340px;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
 
 #devHero h2 {
     margin-bottom: 0;
@@ -33,6 +48,7 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
 div#sectionLinks {
     margin: auto;
     display: flex;
+
 }
 
 div#sectionLinks button {
