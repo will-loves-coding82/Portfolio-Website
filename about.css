@@ -48,7 +48,6 @@ div#skillsGrid {
     width: fit-content;
     border-radius: var(--border-radius2);
     background-color: var(--light-grey);
-    opacity: 0;
 }
 
 

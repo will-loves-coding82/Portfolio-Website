@@ -10,7 +10,7 @@
     <link rel = "stylesheet" href = "art.css">
 
     <script type="module">
-        import { animate, scroll, hover, stagger } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+        import { animate, scroll, hover, stagger, press } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
         let root = document.querySelector(':root');
         const savedTheme = localStorage.getItem('theme');
         
@@ -36,7 +36,8 @@
             }
         }
 
-        animate(".flexItem", {opacity: 1, y: [100, 0]},  {delay: stagger(0.2) })
+        animate(".flexItem", {opacity: 1, y: [100, 0]},  {delay: stagger(0.1) })
+
         
     </script>
 

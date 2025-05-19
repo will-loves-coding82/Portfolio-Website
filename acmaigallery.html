@@ -4,40 +4,148 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, init-scale = 1.0"/>
+    <meta name="viewport" content="width=device-width, init-scale = 1.0" />
 
     <title>Gallery</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 
-    <script>
-        let root = document.querySelector(':root');
-        const savedTheme = localStorage.getItem('theme');
-        
+    <script type="module">
+        import { animate, spring } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
 
-        if (savedTheme) {
-            console.log("checking for theme")
+        window.addEventListener('DOMContentLoaded', () => {
 
-            const isDark = savedTheme == "isDark";
-            console.log("updating theme")
-            if (isDark) {
-                localStorage.setItem('theme', 'isDark');
-                root.style.setProperty('--app-background-color', "black");
-                root.style.setProperty('--text-color', "white");
-                root.style.setProperty('--title-color', "white");  
-                root.style.setProperty('--dark-grey', "var(--light-grey)");  
-                root.style.setProperty('--grey1', "var(--main-black)");  
-            }  
-            else {
-                localStorage.setItem('theme', 'isLight');
-                root.style.setProperty('--app-background-color', "white");
-                root.style.setProperty('--text-color', "black");  
-                root.style.setProperty('--title-color', "var(--main-black");  
-                root.style.setProperty('--grey1', "#f7f7f7");  
+            const savedTheme = localStorage.getItem('theme');
+            let root = document.querySelector(':root');
+
+             if (savedTheme) {
+                console.log("checking for theme")
+
+                const isDark = savedTheme == "isDark";
+                console.log("updating theme")
+                if (isDark) {
+                    localStorage.setItem('theme', 'isDark');
+                    root.style.setProperty('--app-background-color', "black");
+                    root.style.setProperty('--text-color', "white");
+                    root.style.setProperty('--title-color', "white");
+                    root.style.setProperty('--dark-grey', "var(--light-grey)");
+                    root.style.setProperty('--grey1', "var(--main-black)");
+                }
+                else {
+                    localStorage.setItem('theme', 'isLight');
+                    root.style.setProperty('--app-background-color', "white");
+                    root.style.setProperty('--text-color', "black");
+                    root.style.setProperty('--title-color', "var(--main-black");
+                    root.style.setProperty('--grey1', "#f7f7f7");
+                }
             }
-        }
+
+            const images = document.querySelectorAll('#carousel img')
+            let currentIndex = 0
+
+            images.forEach((img, i) => {
+                console.log("index", i)
+                img.style.zIndex = images.length - i
+                if (i == currentIndex) {
+                    img.style.opacity = 1
+                } else {
+                    img.style.opacity = 0
+                }
+            })
+
+
+            // Logic for paginating carousel content 
+            function showImage(nextIndex, direction) {
+                if (nextIndex === currentIndex || nextIndex < 0 || nextIndex >= images.length) return
+
+                const currentImg = images[currentIndex]
+                const nextImg = images[nextIndex]
+
+                // Position next image off-screen (left or right)
+                nextImg.style.left = `${150 * direction}%`
+
+                // Animate current image out
+                animate(currentImg, { opacity: 0, left: `${-150 * direction}%` },{ type: spring, bounce: 0.2, duration: 0.5 })
+
+                // Animate next image in
+                animate(nextImg, { opacity: 1, left: '10%' }, { type: spring, bounce: 0.2, duration: 0.5 })
+
+                currentIndex = nextIndex
+            }
+
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                const next = (currentIndex + 1)
+                showImage(next, 1)
+            })
+
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                const next = (currentIndex - 1)
+                showImage(next, -1)
+            })
+        })
+
+
     </script>
+
+    <style>
+        #carousel {
+            position: relative;
+            margin: auto;
+            /* align-items: center; */
+            padding: 24px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 2rem;
+            background-color: var(--light-grey);
+            border-radius: var(--border-radius3);
+            margin-bottom: 1rem;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        @media (max-width: 900px) {
+            #carousel {
+                height: 400px;
+                padding: 12px;
+            }
+              #carousel img {
+                max-height: 500px;
+              }
+        }
+
+        #carousel img {
+            position: absolute; 
+            margin: auto;
+            left: 10%;
+            width: 80%;
+            justify-self: center;
+        }
+
+        button {
+            color: white;
+            border: none;
+            width: fit-content;
+            background-color: var(--dark-grey1);
+            border-radius: 32px;
+            padding: 8px 18px;
+            margin: 0;
+            font-size: var(--font4);
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease-in;
+            margin: 0;
+            max-height: 40px;
+            align-items: center;
+            display: flex;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+      
+    </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -65,7 +173,7 @@
         <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a id = "active" href="devprojects.html">Projects</a></li>
+            <li><a id="active" href="devprojects.html">Projects</a></li>
             <li><a href="art.html">Art</a></li>
         </ul>
 
@@ -80,11 +188,58 @@
     <main>
 
         <section id="galleryHero">
-            <h1>Gallery</h1>
+            <h1>ACM AI</h1>
         </section>
+
+        <section id="carousel">
+            <img src="/assets/media/ACM/LeaderBoard.png" style="align-self: center;">
+            <img src="/assets/media/ACM/MyTeam.png"  style="align-self: center;">
+             <img src="/assets/media/ACM/FindTeams.png"  style="align-self: center;">
+            <img src="/assets/media/ACM/FindTeamsMockup.png"> 
+
+        </section>
+
+        <div style="margin-top: 1rem; display: flex; gap: 8px">
+            <button id="prevBtn">Prev</button>
+            <button id="nextBtn">Next</button>
+        </div>
 
 
     </main>
+
+    <footer>
+        <div>
+            <section class="socialLinks">
+                <h4>Let's stay connected</h4>
+                <span>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/" target="_blank"><i
+                            class="devicon-linkedin-plain"></i></a>
+                    <a href="https://github.com/will-loves-coding82" target="_blank"><i
+                            class="devicon-github-original"></i></a>
+                    <!-- <i class="devicon-facebook-plain"></i> -->
+                </span>
+            </section>
+
+            <section class="additionalResources">
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="devprojects.html">Work</a>
+                    <a href="art.html">Art</a>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <a href="tel:8189704252">818-970-4252</a>
+                    <a href="mailto:williammmmm.kim@gmail.com">williammmmm.kim@gmail.com</a>
+
+                </div>
+
+            </section>
+        </div>
+
+    </footer>
 
 </body>
 
