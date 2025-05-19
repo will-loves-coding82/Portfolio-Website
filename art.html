@@ -9,7 +9,8 @@
     <link rel = "stylesheet" href = "style.css">
     <link rel = "stylesheet" href = "art.css">
 
-    <script>
+    <script type="module">
+        import { animate, scroll, hover, stagger } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
         let root = document.querySelector(':root');
         const savedTheme = localStorage.getItem('theme');
         
@@ -34,6 +35,9 @@
                 root.style.setProperty('--grey1', "#f7f7f7");  
             }
         }
+
+        animate(".flexItem", {opacity: 1, y: [100, 0]},  {delay: stagger(0.2) })
+        
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
@@ -65,16 +69,16 @@
 
         <ul class="navMenu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
-            <li><a href="art.html">Art</a></li>
+            <li><a id="active" href="art.html">Art</a></li>
         </ul>
 
         <ul class="dropDownMenu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
-            <li><a href="art.html">Art</a></li>
+            <li><a id="active" href="art.html">Art</a></li>
         </ul>
 
 
@@ -137,7 +141,7 @@
                 <div>
                     <h4>Quick Links</h4>
                     <a href = "index.html">Home</a>
-                    <a href = "aboutme.html">About</a>
+                    <a href = "about.html">About</a>
                     <a href = "devprojects.html">Work</a>
                     <a href = "art.html">Art</a>
                 </div>

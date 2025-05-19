@@ -1,5 +1,6 @@
 @import 'vars.css';
 
+
 #aboutHero {
     text-align: center;
     margin-bottom: 12rem;
@@ -47,6 +48,7 @@ div#skillsGrid {
     width: fit-content;
     border-radius: var(--border-radius2);
     background-color: var(--light-grey);
+    opacity: 0;
 }
 
 
@@ -71,6 +73,11 @@ section#educationContainer p:not(#schoolName){
 section#educationContainer p#schoolName {
     color: var(--blue);
     margin-top: 0;
+}
+
+.hiddenSection {
+    opacity: 0;
+    transform: translateX(-100px);
 }
 
 

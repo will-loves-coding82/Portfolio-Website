@@ -31,6 +31,7 @@ section#gallery {
 }
 
 .flexItem {
+    opacity: 0;
     padding: 10px;
     overflow: hidden;
     text-align: center;

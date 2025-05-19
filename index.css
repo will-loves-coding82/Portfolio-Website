@@ -51,6 +51,7 @@ h2#title {
    padding: 16px;
    border-radius: var(--border-radius3);
    background-color: var(--light-grey);
+   opacity: 0;
 }
 
 .gridItem p:not(a > p) {

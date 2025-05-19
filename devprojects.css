@@ -62,11 +62,12 @@ div#sectionLinks button {
     background: var(--text-normal-grey);
     border-radius: var(--border-radius2);
     padding: 12px;
-
 }
+
 div#sectionLinks button:hover {
     background-color: rgb(208, 208, 208);
 }
+
 
 div#sectionLinks button p{
     color: var(--text-dark-grey);
@@ -87,7 +88,7 @@ section#soloRunning h2 {
 }
 
 section#soloRunning img {
-    max-width: 340px;
+    max-width: 300px;
     margin: 4rem auto 2rem auto;
 }
 
@@ -203,18 +204,18 @@ section#acmAI div:not(:first-child) {
     max-width: 800px;
     max-height: 450px;
     margin: auto;
-    justify-content: center;
+    /* justify-content: center; */
     border-radius: var(--border-radius3);
     margin-top: 2rem;
     display: flex;
-    padding: 48px 48px 0 48px;
+    /* padding: 48px 48px 0 48px; */
     overflow-y: hidden;
     box-sizing: border-box;
     
 }
 
 section#acmAI div:not(:first-child)  img {
-    max-width: 450px;
+    max-width: 400px;
     margin: auto;
 
 }

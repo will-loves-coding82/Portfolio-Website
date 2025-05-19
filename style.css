@@ -145,6 +145,7 @@ a:hover {
  
 
 
+
 nav {
     position: fixed;
     display: flex;
@@ -164,6 +165,10 @@ nav svg {
     margin: 0 var(--margin5, 24px);
 }
 
+
+nav a#active {
+    color: var(--blue);
+}
 
 
 nav li {

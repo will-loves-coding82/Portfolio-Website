@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, init-scale = 1.0" />
 
     <title>William Kim | Software Developer Intern</title>
-    <link rel="icon" type="image/x-icon" href="/assets/media/logo2.svg">
+    <link rel="icon" type="image" href="/assets/media/my-notion-face-portrait.png">
 
     <!--Style sheets-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
 
-    <script src="scripts/index.js" type="module"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module">
+        import { animate, frame, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@12.12.0/+esm"
+
+        inView("section#introduction",  
+            (element, enterInfo) => {
+                console.log("Element in view:", element);
+
+                const animation = animate(element, { opacity: 1 }, {duration: 0.8})
+                
+                // This will fire when the element leaves the viewport
+                return (leaveInfo) => animation.stop()
+            }        
+        )
+
+        animate(".gridItem", { opacity: 1, y: [100, 0] }, { delay: stagger(0.3) })
+    </script>
 
 
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -49,15 +60,15 @@
         </label>
 
         <ul class="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a id="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
             <li><a href="art.html">Art</a></li>
         </ul>
 
         <ul class="dropDownMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
+            <li><a id="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="devprojects.html">Projects</a></li>
             <li><a href="art.html">Art</a></li>
         </ul>
@@ -72,12 +83,12 @@
 
         <header id="mainHero">
 
-            <section id="introduction">
+            <section id="introduction" style="opacity: 0">
 
                 <h2 id="title">William Kim</span></h2>
                 <p id = "role">Developer at San Diego Supercomputer Center</p>
 
-                <a href="aboutme.html" class="arrowLink">
+                <a href="about.html" class="arrowLink">
                     <p>About Me</p>
                     <img src="assets/media/rightArrow.png" width="17" height="20">
                 </a>
@@ -110,7 +121,7 @@
                 </div>
 
                 <div class="gridItem" id="item-2">
-                    <p><a href="/aboutme.html">Work</a></p>
+                    <p><a href="/about.html">Work</a></p>
                     <p>Committed to 3 campus organizations</p>
                 </div>
             </div>
@@ -138,7 +149,7 @@
                 <div>
                     <h4>Quick Links</h4>
                     <a href = "index.html">Home</a>
-                    <a href = "aboutme.html">About</a>
+                    <a href = "about.html">About</a>
                     <a href = "devprojects.html">Work</a>
                     <a href = "art.html">Art</a>
                 </div>

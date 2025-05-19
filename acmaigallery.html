@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, init-scale = 1.0"/>
+
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+    <script>
+        let root = document.querySelector(':root');
+        const savedTheme = localStorage.getItem('theme');
+        
+
+        if (savedTheme) {
+            console.log("checking for theme")
+
+            const isDark = savedTheme == "isDark";
+            console.log("updating theme")
+            if (isDark) {
+                localStorage.setItem('theme', 'isDark');
+                root.style.setProperty('--app-background-color', "black");
+                root.style.setProperty('--text-color', "white");
+                root.style.setProperty('--title-color', "white");  
+                root.style.setProperty('--dark-grey', "var(--light-grey)");  
+                root.style.setProperty('--grey1', "var(--main-black)");  
+            }  
+            else {
+                localStorage.setItem('theme', 'isLight');
+                root.style.setProperty('--app-background-color', "white");
+                root.style.setProperty('--text-color', "black");  
+                root.style.setProperty('--title-color', "var(--main-black");  
+                root.style.setProperty('--grey1', "#f7f7f7");  
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav class="navBar">
+        <a href="/acmaigallery.html">
+            <svg width="40" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="59" cy="53" r="53" fill="#181818" />
+                <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
+                <path
+                    d="M58.8943 50.122L51.4848 71H43.8198L35.1328 41.0335H43.4183L48.6378 62.5685L55.9743 41.6175H61.8508L69.1143 62.5685L74.4068 41.0335H82.6923L74.0418 71H66.3768L58.8943 50.122Z"
+                    fill="white" />
+            </svg>
+        </a>
+
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a id = "active" href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        <ul class="dropDownMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="galleryHero">
+            <h1>Gallery</h1>
+        </section>
+
+
+    </main>
+
+</body>
+
+
+
+</html>
