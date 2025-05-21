@@ -125,6 +125,7 @@ h2#title {
       flex-direction: column;
       justify-content: center;
       margin: auto;
+      padding-top: 2rem;
    }
 
    #introduction {
