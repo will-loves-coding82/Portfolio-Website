@@ -41,13 +41,24 @@
                 }
             }
 
-            const images = document.querySelectorAll('#carousel img')
-            let currentIndex = 0
+            const websiteImages = document.querySelectorAll('#websiteCarousel img')
+            const competitionImages = document.querySelectorAll('#compsCarousel img')
+            
+            let websiteImageIndex = 0
+            let competitionImageIndex = 0
 
-            images.forEach((img, i) => {
-                console.log("index", i)
-                img.style.zIndex = images.length - i
-                if (i == currentIndex) {
+            websiteImages.forEach((img, i) => {
+                img.style.zIndex = websiteImages.length - i
+                if (i == websiteImageIndex) {
+                    img.style.opacity = 1
+                } else {
+                    img.style.opacity = 0
+                }
+            })
+
+            competitionImages.forEach((img, i) => {
+                img.style.zIndex = competitionImages.length - i
+                if (i == competitionImageIndex) {
                     img.style.opacity = 1
                 } else {
                     img.style.opacity = 0
@@ -55,12 +66,11 @@
             })
 
 
-            // Logic for paginating carousel content 
-            function showImage(nextIndex, direction) {
-                if (nextIndex === currentIndex || nextIndex < 0 || nextIndex >= images.length) return
+            function showWebsiteImage(nextIndex, direction) {
+                if (nextIndex === websiteImageIndex || nextIndex < 0 || nextIndex >= websiteImages.length) return
 
-                const currentImg = images[currentIndex]
-                const nextImg = images[nextIndex]
+                const currentImg = websiteImages[websiteImageIndex]
+                const nextImg = websiteImages[nextIndex]
 
                 // Position next image off-screen (left or right)
                 nextImg.style.left = `${150 * direction}%`
@@ -71,17 +81,48 @@
                 // Animate next image in
                 animate(nextImg, { opacity: 1, left: '10%' }, { type: spring, bounce: 0.2, duration: 0.5 })
 
-                currentIndex = nextIndex
+                websiteImageIndex = nextIndex
             }
 
-            document.getElementById('nextBtn').addEventListener('click', () => {
-                const next = (currentIndex + 1)
-                showImage(next, 1)
+            document.getElementById('websiteNextBtn').addEventListener('click', () => {
+                const next = (websiteImageIndex + 1)
+                showWebsiteImage(next, 1)
             })
 
-            document.getElementById('prevBtn').addEventListener('click', () => {
-                const next = (currentIndex - 1)
-                showImage(next, -1)
+            document.getElementById('websitePrevBtn').addEventListener('click', () => {
+                const next = (websiteImageIndex - 1)
+                showWebsiteImage(next, -1)
+            })
+
+
+
+            // Logic for paginating carousel content 
+            function showCompetitionImage(nextIndex, direction) {
+                if (nextIndex === competitionImageIndex || nextIndex < 0 || nextIndex >= competitionImages.length) return
+
+                const currentImg = competitionImages[competitionImageIndex]
+                const nextImg = competitionImages[nextIndex]
+
+                // Position next image off-screen (left or right)
+                nextImg.style.left = `${150 * direction}%`
+
+                // Animate current image out
+                animate(currentImg, { opacity: 0, left: `${-150 * direction}%` },{ type: spring, bounce: 0.2, duration: 0.5 })
+
+                // Animate next image in
+                animate(nextImg, { opacity: 1, left: '10%' }, { type: spring, bounce: 0.2, duration: 0.5 })
+
+                competitionImageIndex = nextIndex
+            }
+
+            document.getElementById('compsNextBtn').addEventListener('click', () => {
+                const next = (competitionImageIndex + 1)
+                showCompetitionImage(next, 1)
+            })
+
+            document.getElementById('compsPrevBtn').addEventListener('click', () => {
+                const next = (competitionImageIndex - 1)
+                showCompetitionImage(next, -1)
             })
         })
 
@@ -89,10 +130,16 @@
     </script>
 
     <style>
-        #carousel {
+
+        section h2+p {
+            padding-top: 8px;
+            color: var(--text-dark-grey);
+            max-width: var(--screen-md);
+        }
+
+        #websiteCarousel, #compsCarousel {
             position: relative;
             margin: auto;
-            /* align-items: center; */
             padding: 24px;
             height: 500px;
             display: flex;
@@ -107,22 +154,31 @@
         }
 
         @media (max-width: 900px) {
-            #carousel {
+            #compsCarousel {
                 height: 400px;
                 padding: 12px;
             }
-              #carousel img {
+            #compsCarousel img {
                 max-height: 500px;
-              }
+            }
         }
 
-        #carousel img {
+        #compsCarousel img {
             position: absolute; 
             margin: auto;
             left: 10%;
             width: 80%;
             justify-self: center;
         }
+
+         #websiteCarousel img {
+            position: absolute; 
+            margin: auto;
+            left: 10%;
+            width: 80%;
+            justify-self: center;
+        }
+
 
         button {
             color: white;
@@ -187,21 +243,51 @@
 
     <main>
 
-        <section id="galleryHero">
-            <h1>ACM AI</h1>
+         <section id="compsPortalHeader">
+            <h2>Main Website</h2>
+            <p>
+                One of my first tasks as a frontend developer was to redesign the club's main website. I worked with another bright developer on our team over the last stretch of Summer 2024 
+                trying out different ideas. The initial designs were...bare bones to say the least, but we were short on time and needed to push an MVP 
+                for the fall quarter. The last slide is the only photo I have of our first production version on a mobile browser.
+            </p>
         </section>
 
-        <section id="carousel">
+        <section id="websiteCarousel">
+            <img src="/assets/media/ACM/MainPage.png"> 
+            <img src="/assets/media/ACM/EventsMockup.png"> 
+            <img src="/assets/media/ACM/MainWebsiteMobile.png"> 
+            <img src="/assets/media/ACM/Events.png"> 
+        </section>
+        <div style="margin-top: 1rem; display: flex; gap: 8px">
+            <button id="websitePrevBtn">Prev</button>
+            <button id="websiteNextBtn">Next</button>
+        </div>
+
+        <div style="margin-top: 10rem"></div>
+
+        <section id="compsPortalHeader">
+            <h2>AI Competitions Portal</h2>
+            <p>
+                By winter of 2024, my dev lead wanted me to create a new competitions portal for club members. 
+                The design process drew inspiration from endless hours or pinterest boards and fiddling around to see what worked 
+                and what didn't. I ultimately wanted the layout to feel intuitive but fun to play around with. While this
+                project was put on hold until after I graduated, you can see elements of the original design used for the 
+                2025 StarChess competition. 
+            </p>
+        </section>
+        
+
+        <section id="compsCarousel">
+            <img src="/assets/media/ACM/FindTeamsMockup.png"> 
+            <img src="/assets/media/ACM/MyTeamMockup.png"> 
             <img src="/assets/media/ACM/LeaderBoard.png" style="align-self: center;">
             <img src="/assets/media/ACM/MyTeam.png"  style="align-self: center;">
-             <img src="/assets/media/ACM/FindTeams.png"  style="align-self: center;">
-            <img src="/assets/media/ACM/FindTeamsMockup.png"> 
-
+            <img src="/assets/media/ACM/FindTeams.png"  style="align-self: center;">
         </section>
 
         <div style="margin-top: 1rem; display: flex; gap: 8px">
-            <button id="prevBtn">Prev</button>
-            <button id="nextBtn">Next</button>
+            <button id="compsPrevBtn">Prev</button>
+            <button id="compsNextBtn">Next</button>
         </div>
 
 
