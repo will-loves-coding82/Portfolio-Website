@@ -8,27 +8,18 @@ main {
 
 }
 
-section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
+section#soloRunning p, section#tabeMaps p, section#acmAI p, section#bloomBook p, section#vgdc p{
     color: var(--text-dark-grey);
 }
 
 
 #devHero {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin: 0 auto 9rem auto;
+    margin: 0 auto 0 auto;
     align-items: center;
     text-align: center;
-}
-
-@media (max-width: 720px) {
-
-    div#sectionLinks {
-        flex-wrap: wrap;
-        max-width: 320px;
-        justify-content: center;
-        gap: 12px;
-    }
 }
 
 
@@ -44,9 +35,14 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
 
 
 div#sectionLinks {
-    margin: 2rem auto 0 auto;
+    align-items: center;
+    max-width: var(--screen-sm);
     display: flex;
-
+    flex-wrap: wrap;
+    padding: 24px;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 9rem;
 }
 
 div#sectionLinks button {
@@ -86,6 +82,35 @@ section#soloRunning img {
 
 section#soloRunning button {
     margin: auto;
+}
+
+
+section#tabeMaps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 10rem auto;
+    text-align: center;
+    
+}
+
+section#tabeMaps div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#tabeMaps div + p{
+    max-width: var(--screen-md);
+    margin: auto;
+    padding: 24px;
+}
+
+section#tabeMaps img {
+    max-width: 700px;
+    width: 100%;
+    margin: 4rem auto 2rem auto;
+    object-fit: cover;
 }
 
 
@@ -196,7 +221,6 @@ section#acmAI div:not(:first-child) {
     max-width: 800px;
     max-height: 450px;
     margin: auto;
-    /* justify-content: center; */
     border-radius: var(--border-radius3);
     margin-top: 2rem;
     display: flex;

@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, init-scale = 1.0"/>
+    <meta name="viewport" content="width=device-width, init-scale = 1.0" />
 
     <title>About Me Page</title>
     <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
 
         let root = document.querySelector(':root');
         const savedTheme = localStorage.getItem('theme');
-        
+
 
         if (savedTheme) {
             console.log("checking for theme")
@@ -28,30 +28,30 @@
                 localStorage.setItem('theme', 'isDark');
                 root.style.setProperty('--app-background-color', "black");
                 root.style.setProperty('--text-color', "white");
-                root.style.setProperty('--title-color', "white");  
-                root.style.setProperty('--dark-grey', "var(--light-grey)");  
-                root.style.setProperty('--grey1', "var(--main-black)");  
-            }  
+                root.style.setProperty('--title-color', "white");
+                root.style.setProperty('--dark-grey', "var(--light-grey)");
+                root.style.setProperty('--grey1', "var(--main-black)");
+            }
             else {
                 localStorage.setItem('theme', 'isLight');
                 root.style.setProperty('--app-background-color', "white");
-                root.style.setProperty('--text-color', "black");  
-                root.style.setProperty('--title-color', "var(--main-black");  
-                root.style.setProperty('--grey1', "#f7f7f7");  
+                root.style.setProperty('--text-color', "black");
+                root.style.setProperty('--title-color', "var(--main-black");
+                root.style.setProperty('--grey1', "#f7f7f7");
             }
         }
 
-        document.querySelectorAll("section:not(footer section)").forEach((item) => {
+        document.querySelectorAll("section:not(footer section, #devHero)").forEach((item) => {
             scroll(animate(item, { opacity: [0, 1, 1, 0] }), {
                 target: item,
-                offset: ["start end","end start"],
+                offset: ["start end", "end start"],
             })
         })
 
-        hover("div#sectionLinks a", (element) => {
-            const animation = animate(element, { scale: 1.1 })
-            return () => animate(element, {scale: 1})
-        })
+        // hover("div#sectionLinks a", (element) => {
+        //     const animation = animate(element, { scale: 1.1 })
+        //     return () => animate(element, {scale: 1})
+        // })
 
     </script>
 
@@ -92,146 +92,188 @@
         </ul>
     </nav>
 
-    
+
     <!--Main content here -->
     <main id="devMain">
 
         <br>
 
-
         <section id="devHero">
-                <span>
-                    <h2>My Projects</h2>
-                    <p>A showcase of my most interesting creations.</p>
-                    
-                    <div id = "sectionLinks">
-                     
-                        <a href = "#soloRunning">
-                            <button class = "button" id = "contactButton"><p>Solo Running</p></button>
-                        </a>
-                        <a href = "#bloomBook">
-                            <button class = "button" id = "contactButton"><p>Bloom Book</p></button>
-                        </a>
-                        <a href = "#acmAI">
-                            <button class = "button" id = "contactButton"><p>ACM</p></button>
-                        </a>
-                        <a href = "#vgdc">
-                            <button class = "button" id = "contactButton"><p>VGDC</p></button>
-                        </a>
-                    </div>
-                </span>
-            
-            <!-- <img src="assets/media/Notion/Fast-Internet.png" height="240" width="240" > -->
+            <span>
+                <h2>My Projects</h2>
+                <p>A showcase of my most interesting creations.</p>
+            </span>
 
-            
+                <div id="sectionLinks">
+                    <a href="#soloRunning">
+                        <button class="button">
+                            <p>Solo Running</p>
+                        </button>
+                    </a>
+                    <a href="#tabeMaps">
+                        <button class="button">
+                            <p>TabeMaps</p>
+                        </button>
+                    </a>
+                    <a href="#bloomBook">
+                        <button class="button">
+                            <p>Bloom Book</p>
+                        </button>
+                    </a>
+                    <a href="#acmAI">
+                        <button class="button">
+                            <p>ACM</p>
+                        </button>
+                    </a>
+                    <a href="#vgdc">
+                        <button class="button">
+                            <p>VGDC</p>
+                        </button>
+                    </a>
+                </div>
         </section>
 
 
-
-        <section id = "soloRunning">
-            <div id = "soloRunningDescription">
+        <section id="soloRunning">
+            <div id="soloRunningDescription">
                 <p>IOS Mobile Development</p>
                 <h2>Solo Running</h2>
 
                 <img src="assets/media/Solo/DashboardMockup.png">
                 <p>
-                    An IOS mobile application built with SwiftUI designed to track and record your runs. Leverages the power of Apple's 
-                    MapKit to plan routes and SwiftData + CloudKit for persistent storage. 
-                    
+                    An IOS mobile application built with SwiftUI designed to track and record your runs. Leverages the
+                    power of Apple's
+                    MapKit to plan routes and SwiftData + CloudKit for persistent storage.
+
                 </p>
 
-                <a href = "https://solo-running.netlify.app" target="_blank">
-                    <button class = "button"><p style="color:white;">learn more</p></button>
+                <a href="https://solo-running.netlify.app" target="_blank">
+                    <button class="button">
+                        <p style="color:white;">learn more</p>
+                    </button>
                 </a>
             </div>
         </section>
 
-        <section id = "bloomBook">
-            <div id = "bloomBookDescription">
+        <section id="tabeMaps">
+            <div id="tabeMapsDescription">
+                <p style="margin-bottom: -12px;">Find Restaurants in Japan</p>
+
+                <h2>TabeMaps</h2>
+                <img src="assets/media/TabeMaps/SearchPage.jpeg">
+                <video style="max-width: 700px; margin: auto;" controls>
+                    <source src="assets/media/TabeMaps/Demo.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <p>
+                A Svelte-based website that allows users to find nearby restaurants in Japan. This was more of
+                pet project I worked on with friends and while it never saw an official release, we had a blast
+                sharing our ideas and creativity. I helped create the look and feel of the application, which was
+                geared towards minimalism and practicality.
+            </p>
+        </section>
+
+        <section id="bloomBook">
+            <div id="bloomBookDescription">
                 <h2>Bloom Book</h2>
                 <p>
-                    A feature-rich mobile Android application that helps users manage their plant collections in a fun 
-                    and pleasing UI. I worked alongside other SDSC students as build master, which meant performing research on 
-                    best coding practices like MVVM, designing user schemas, client-side navigation, cloud functions, and managing our 
-                    gitlab repository. 
-                    
+                    A feature-rich mobile Android application that helps users manage their plant collections in a fun
+                    and pleasing UI. I worked alongside other SDSC students as build master, which meant performing
+                    research on
+                    best coding practices like MVVM, designing user schemas, client-side navigation, cloud functions,
+                    and managing our
+                    gitlab repository.
+
                 </p>
             </div>
 
-            <div id = "bloomBookGrid">
-                <div id = "growth" class = "detail">
+            <div id="bloomBookGrid">
+                <div id="growth" class="detail">
                     <h4>Track growth.</h4>
                     <p>Record your plant observations with an aesthetic UI</p>
                 </div>
-                <div id = "mockup" >
-                    <img id = "mockupImage" src = "assets/media/BloomBook/BloomBookTwoPhones.png" height="400" width="300" style="transform:translateY(-80px); margin: auto">
-                    <a href = "https://akanksha-maker-ucsd.github.io/bloomBook/" target="_blank">
-                        <button class="button"><p>view</p></button>
+                <div id="mockup">
+                    <img id="mockupImage" src="assets/media/BloomBook/BloomBookTwoPhones.png" height="400" width="300"
+                        style="transform:translateY(-80px); margin: auto">
+                    <a href="https://akanksha-maker-ucsd.github.io/bloomBook/" target="_blank">
+                        <button class="button">
+                            <p>view</p>
+                        </button>
                     </a>
                 </div>
-                <div id = "reminders" class = "detail">
+                <div id="reminders" class="detail">
                     <h4>Set Reminders.</h4>
                     <p>Water schedules and tasks made easy</p>
                 </div>
-                <div id = "camera" class = "detail">
+                <div id="camera" class="detail">
                     <h4>Capture Photos.</h4>
                     <p>Use the built-in camera to identify plants</p>
                 </div>
             </div>
         </section>
-        
 
 
-        <section id = "acmAI">
-            <div id = "aiDescription">
+
+        <section id="acmAI">
+            <div id="aiDescription">
                 <p>Website Redesign</p>
                 <h2>ACM Artifical Intelligence</h2>
             </div>
 
             <div style="display: flex; flex-direction: column; justify-content: space-between; overflow-x: hidden;">
-                
+
                 <div style="display: flex; width: 100%; flex-direction: row; justify-content: flex-end;">
                     <p style="padding-right: 24px; margin: 0"><a href="/acmaigallery.html">Gallery</a></p>
                 </div>
-                
+
                 <div style="width: 100%; display: flex; justify-content: center;">
-                    <img src = "assets/media/ACM/CompsPortal.png" style = "border-radius: 12px; margin-top: 64px;" >
+                    <img src="assets/media/ACM/CompsPortal.png" style="border-radius: 12px; margin-top: 64px;">
                 </div>
 
             </div>
 
-            <p style = "max-width: 800px; margin: auto; text-align: center; margin-top: 3rem;">
-                I joined UCSD's ACM AI in 2023 to help redesign their outdated web application. I worked with several  
-                developers to plan and implement our mockups into reactive components. We brought a new face and modern aesthetic 
-                to the final product that was fun and easy to use. 
+            <p style="max-width: 800px; margin: auto; text-align: center; margin-top: 3rem;">
+                I joined UCSD's ACM AI in 2023 to help redesign their outdated web application. I worked with several
+                developers to plan and implement our mockups into reactive components. We brought a new face and modern
+                aesthetic
+                to the final product that was fun and easy to use.
             </p>
 
             <div style="overflow: hidden; justify-content: center;">
-                <img src = "assets/media/ACM/acmAIHome.png" style = "border-radius: 20px; margin: auto; margin-top: 64px;" >
+                <img src="assets/media/ACM/acmAIHome.png" style="border-radius: 20px; margin: auto; margin-top: 64px;">
             </div>
-            
-            <a href = "https://ai.acmucsd.com" target="_blank">
-                <button class = "button"><p>view site</p></button>
+
+            <a href="https://ai.acmucsd.com" target="_blank">
+                <button class="button">
+                    <p>view site</p>
+                </button>
             </a>
         </section>
 
 
 
-        <section id = "vgdc">
+        <section id="vgdc">
 
             <div>
                 <h2>Video Game Development Club</h2>
                 <p>
-                    Created an SSR website in Next.js, developed alongside with my friend Chase Peterson. As website manager, I helped design prototypes in Figma and
-                    implemented frontend components using Tailwind CSS. Created a novel blog system using React Markdown to convert markdown files into interactive pages. 
-                    Implemented a newsletter signup form using MailChimp API to bring further engagement to club members.
+                    Created an SSR website in Next.js, developed alongside with my friend Chase Peterson. As website
+                    manager, I helped design prototypes in Figma and
+                    implemented frontend components using Tailwind CSS. Created a novel blog system using React Markdown
+                    to convert markdown files into interactive pages.
+                    Implemented a newsletter signup form using MailChimp API to bring further engagement to club
+                    members.
                 </p>
-                <a href = "https://vgdc.dev" target="_blank">
-                    <button class="button"><p style="color:white">view site</p></button>
+                <a href="https://vgdc.dev" target="_blank">
+                    <button class="button">
+                        <p style="color:white">view site</p>
+                    </button>
                 </a>
             </div>
-            
-            <img id = "homeImage" src = "assets/media/VGDc/HomePageHero.png" style="align-self: flex-end; transform: translateY(-300px);"/>
+
+            <img id="homeImage" src="assets/media/VGDc/HomePageHero.png"
+                style="align-self: flex-end; transform: translateY(-300px);" />
 
 
         </section>
@@ -242,29 +284,31 @@
 
     <footer>
         <div>
-            <section class = "socialLinks">
+            <section class="socialLinks">
                 <h4>Let's stay connected</h4>
                 <span>
-                    <a href="https://www.linkedin.com/in/william-kim-810684221/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-                    <a href="https://github.com/will-loves-coding82" target="_blank"><i class="devicon-github-original"></i></a>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/" target="_blank"><i
+                            class="devicon-linkedin-plain"></i></a>
+                    <a href="https://github.com/will-loves-coding82" target="_blank"><i
+                            class="devicon-github-original"></i></a>
                     <!-- <i class="devicon-facebook-plain"></i> -->
                 </span>
             </section>
 
-            <section class = "additionalResources">
+            <section class="additionalResources">
                 <div>
                     <h4>Quick Links</h4>
-                    <a href = "index.html">Home</a>
-                    <a href = "about.html">About</a>
-                    <a href = "devprojects.html">Work</a>
-                    <a href = "art.html">Art</a>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="devprojects.html">Work</a>
+                    <a href="art.html">Art</a>
                 </div>
 
                 <div>
                     <h4>Contact</h4>
-                    <a href = "tel:8189704252">818-970-4252</a>
+                    <a href="tel:8189704252">818-970-4252</a>
                     <a href="mailto:williammmmm.kim@gmail.com">williammmmm.kim@gmail.com</a>
-                    
+
                 </div>
 
             </section>
@@ -272,4 +316,5 @@
 
     </footer>
 </body>
+
 </html>
