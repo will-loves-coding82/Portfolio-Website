@@ -2,7 +2,8 @@
 
 
 #mainHero {
-   margin: 8rem auto;
+   margin: auto;
+   height: 80vh;
    display: flex;
    flex-direction: row;
    justify-content: space-between;

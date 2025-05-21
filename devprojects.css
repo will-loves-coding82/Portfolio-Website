@@ -18,18 +18,10 @@ section#soloRunning p, section#acmAI p, section#bloomBook p, section#vgdc p{
     justify-content: space-evenly;
     margin: 0 auto 9rem auto;
     align-items: center;
+    text-align: center;
 }
 
 @media (max-width: 720px) {
-    #devHero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    #devHero h2+p {
-        max-width: 200px;
-    }
 
     div#sectionLinks {
         flex-wrap: wrap;
@@ -281,12 +273,6 @@ section#vgdc img {
 
 
 @media (max-width: 920px) {
-
-    #devHero img {
-        height: 200px;
-        width: 200px;
-        margin-top: 2rem;
-    }
 
     #bloomBookGrid {
         grid-template-rows: repeat(5, 180px) !important;
