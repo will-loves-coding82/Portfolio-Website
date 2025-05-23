@@ -105,6 +105,7 @@ h2#title {
    max-height: 106px;
 }
 
+
 #item-2 p:nth-child(2) {
    color: var(--text-dark-grey);
    background: none;
