@@ -106,6 +106,7 @@ h2#title {
 }
 
 
+
 #item-2 p:nth-child(2) {
    color: var(--text-dark-grey);
    background: none;
@@ -126,7 +127,8 @@ h2#title {
       flex-direction: column;
       justify-content: center;
       margin: auto;
-      padding-top: 2rem;
+      padding-top: 5rem;
+      margin-bottom: 5rem;
    }
 
    #introduction {
