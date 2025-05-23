@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, init-scale = 1.0" />
+
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+    <style>
+        section#twoFrameHeader {
+            margin: auto;
+            text-align: center;
+        }
+
+        section#twoFrameHeader p {
+            color: var(--text-dark-grey);
+            max-width: var(--screen-sm);
+            margin: auto;
+            margin-top: 1rem;
+        }
+
+        #gallery {
+            max-width: 700px;
+            margin: 5rem auto;
+        }
+
+        img {
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+        }
+
+        p:not(#twoFrameHeader p) {
+            text-align: center;
+            margin: 2rem auto;
+            color: var(--text-dark-grey);
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navBar">
+        <a href="/index.html">
+            <svg width="40" height="61" viewBox="0 0 112 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="59" cy="53" r="53" fill="#181818" />
+                <circle cx="29.5" cy="93.5" r="29.5" fill="#181818" />
+                <path
+                    d="M58.8943 50.122L51.4848 71H43.8198L35.1328 41.0335H43.4183L48.6378 62.5685L55.9743 41.6175H61.8508L69.1143 62.5685L74.4068 41.0335H82.6923L74.0418 71H66.3768L58.8943 50.122Z"
+                    fill="white" />
+            </svg>
+        </a>
+
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a id="active" href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+
+        <ul class="dropDownMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="devprojects.html">Projects</a></li>
+            <li><a href="art.html">Art</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section id="twoFrameHeader">
+            <h2>TwoFrame</h2>
+            <p>
+                After graduation, my former roommate approached me about building tournament management site for video game enthusiasts. 
+                As gamers ourselves, we had a shared vision to improve upon the existing products on the market, most notably Start.gg. 
+            </p>
+        </section>
+
+
+        <section id="gallery">
+            <img src="assets/media/TwoFrame/TwoFrameBracket.png"/>
+            <p>
+                We wanted to give people a tool that could help tourney organizers manage and seed their events easier while giving 
+                regular players a quick way to explore and join games. Although we worked tirelessly for months, we had to put 
+                the project on hold due to certain circumstances.
+            </p>
+
+            <img src="assets/media/TwoFrame/TwoFrameCreate.png"/>
+
+            <p>
+                We utilized another neat library called HeroUI which we used to build our tournament creation form above.
+                It was nice not having to build our own date picker from scratch. Fast development was key after all.
+            </p>
+
+            <img src="assets/media/TwoFrame/TwoFrameMobile.png"/>
+
+            <p>
+                We also integrated an admin page where organizers could manage their events. We added some responsivity to make 
+                mobile experiences enjoyable.
+            </p>
+
+
+            <video style="width: 100%; max-width: 700px; margin: auto;" controls>
+                <source src="assets/media/TwoFrame/TwoFrameDemo.mp4" type="video/mp4">
+            </video>
+
+            <p>
+                Here's a quick demo of our seeding bracket system that my partner built. To make the graph, we utilized
+                a neat tool called ReactFlow. It helped us meet our technical objectives to provide a clean interface to manage rounds 
+                while being serializable to store in a database.
+            </p>
+
+        </section>
+
+    </main>
+
+     <footer>
+        <div>
+            <section class="socialLinks">
+                <h4>Let's stay connected</h4>
+                <span>
+                    <a href="https://www.linkedin.com/in/william-kim-810684221/" target="_blank"><i
+                            class="devicon-linkedin-plain"></i></a>
+                    <a href="https://github.com/will-loves-coding82" target="_blank"><i
+                            class="devicon-github-original"></i></a>
+                    <!-- <i class="devicon-facebook-plain"></i> -->
+                </span>
+            </section>
+
+            <section class="additionalResources">
+                <div>
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="devprojects.html">Work</a>
+                    <a href="art.html">Art</a>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <a href="tel:8189704252">818-970-4252</a>
+                    <a href="mailto:williammmmm.kim@gmail.com">williammmmm.kim@gmail.com</a>
+
+                </div>
+
+            </section>
+        </div>
+
+    </footer>
+
+</body>
+
+
+</html>

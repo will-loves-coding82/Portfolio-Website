@@ -13,6 +13,7 @@ section#soloRunning p, section#tabeMaps p, section#acmAI p, section#bloomBook p,
 }
 
 
+
 #devHero {
     display: flex;
     flex-direction: column;
@@ -89,9 +90,8 @@ section#tabeMaps {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto 10rem auto;
-    text-align: center;
-    
+    margin: 0 24px 10rem 24px;
+    text-align: center;  
 }
 
 section#tabeMaps div {
@@ -114,11 +114,52 @@ section#tabeMaps img {
 }
 
 
+section#twoFrame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+    padding: 5rem 24px 5rem 24px;
+}
+
+@media (max-width: 1200px) {
+    section#twoFrame {
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    #twoFrameDescription button {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+}
+
+#twoFrameDescription {
+    max-width: 400px;
+}
+
+#twoFrameDescription p {
+    color: var(--text-dark-grey)
+}
+
+
+section#twoFrame img {
+    max-width: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 section#bloomBook {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 10rem;
 }
 
 #bloomBookGrid {
@@ -185,7 +226,6 @@ section#bloomBook {
 #bloomBook #mockup button p {
     color: white;
 }
-
 
 
 #aiDescription{
