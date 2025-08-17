@@ -8,7 +8,7 @@ main {
 
 }
 
-section#soloRunning p, section#tabeMaps p, section#acmAI p, section#bloomBook p, section#vgdc p{
+section#stackedHabits p, section#soloRunning p, section#tabeMaps p, section#acmAI p, section#bloomBook p, section#vgdc p{
     color: var(--text-dark-grey);
 }
 
@@ -69,7 +69,7 @@ section#soloRunning {
     justify-content: center;
     text-align: center;
     max-width: 500px;
-    margin: 0 auto 10rem auto;
+    margin: 10rem auto 10rem auto;
 }
 
 section#soloRunning h2 {
@@ -114,7 +114,7 @@ section#tabeMaps img {
 }
 
 
-section#twoFrame {
+section#twoFrame, section#stackedHabits {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -126,29 +126,29 @@ section#twoFrame {
 }
 
 @media (max-width: 1200px) {
-    section#twoFrame {
+    section#twoFrame, section#stackedHabits {
         flex-direction: column;
         text-align: center;
         margin: auto;
     }
 
-    #twoFrameDescription button {
+    #twoFrameDescription button, #stackedHabitsDescription button {
         margin: auto;
         margin-bottom: 2rem;
     }
 
 }
 
-#twoFrameDescription {
+#twoFrameDescription, #stackedHabitsDescription {
     max-width: 400px;
 }
 
-#twoFrameDescription p {
+#twoFrameDescription p, #stackedHabitsDescription p {
     color: var(--text-dark-grey)
 }
 
 
-section#twoFrame img {
+section#twoFrame img, section#stackedHabits img {
     max-width: 600px;
     width: 100%;
     object-fit: cover;
